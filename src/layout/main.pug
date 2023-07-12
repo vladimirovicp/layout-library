@@ -1,0 +1,11 @@
+doctype html
+block variables_layout
+
+html(lang= 'en')
+    head
+        meta(charset='utf-8')
+        title #{title}
+    body
+        include ../component/header
+        block content
+        include ../component/footer

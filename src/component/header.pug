@@ -1,0 +1,34 @@
+-
+    let menu = [
+        {
+            'name': 'About',
+            'href': '#'
+        },
+        {
+            'name': 'Favorites',
+            'href': '#'
+        },
+        {
+            'name': 'Coffee shop',
+            'href': '#'
+        },
+        {
+            'name': 'Contacts',
+            'href': '#'
+        },
+        {
+            'name': 'Library Card',
+            'href': '#'
+        },
+    ];
+
+header.header
+    .container
+        .header__site-name Brooklyn Public Library
+        nav.header__menu
+            ul
+                each item in menu
+                    li
+                        a(href=item.href) !{item.name}
+        .profile
+

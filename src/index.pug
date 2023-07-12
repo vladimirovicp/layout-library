@@ -1,0 +1,16 @@
+extends layout/main
+
+block variables_layout
+    -
+        let title = 'Brooklyn Public Library'
+        let curPage = '/';
+
+block content
+        main
+            include section/welcome
+            section.about
+            section.favorites
+            section.coffee-shop
+            section.our-contacts
+            section.digital
+

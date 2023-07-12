@@ -1,0 +1,62 @@
+@import "./abstracts/variable";
+
+
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size:0.694vw;  // 10/ (1440 / 100)
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+}
+
+body {
+  -webkit-animation: bugfix infinite 1s;
+  margin: 0;
+  padding: 0;
+  background-color: $light;
+
+  color: #140202;
+}
+
+.container {
+  width: 144rem;
+  margin: 0 auto;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'Forum', sans-serif;
+}
+
+h1{
+  line-height: 1.25;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+h1,h2{
+  font-size: 4rem;
+}
+
+
+@media (min-width: 90em) { //1440
+
+    html {
+        font-size:10px;
+    }
+}
+
