@@ -35,6 +35,7 @@ body {
 
 .container {
   width: 144rem;
+  padding: 0 2rem;
   margin: 0 auto;
 }
 
@@ -52,6 +53,32 @@ h1,h2{
   font-size: 4rem;
 }
 
+a{
+  color: $light;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+@media (max-width: 48em) {
+
+  html {
+    font-size: 0.651vw;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .is-desktop{
+    display: none!important;
+  }
+}
+
+@media (min-width: 48em) {
+  .is-mobile{
+    display: none!important;
+  }
+}
 
 @media (min-width: 90em) { //1440
 

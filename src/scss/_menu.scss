@@ -1,0 +1,46 @@
+.menu{
+
+  &__list{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item{
+    list-style: none;
+    &:not(:last-child){
+      margin-right:3rem;
+    }
+  }
+
+  &__link{
+
+  }
+
+}
+
+@media (max-width: 48em) {
+  .menu{
+
+    .container{
+      position: relative;
+    }
+
+    &__wrapper{
+      position: absolute;
+      justify-content: center;
+      align-items: stretch;
+      //background-color: $color5;
+      padding: 6rem 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      transition: top 0.5s ease 0s;
+      overflow: auto;
+      flex-direction: column;
+
+    }
+
+  }
+}

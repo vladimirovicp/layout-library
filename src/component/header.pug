@@ -26,9 +26,15 @@ header.header
     .container
         .header__site-name Brooklyn Public Library
         nav.header__menu
-            ul
-                each item in menu
-                    li
-                        a(href=item.href) !{item.name}
-        .profile
+            .menu__mobile.is-mobile
+                .menu__icon
+                    span
+            .menu__wrapper
+                ul.menu__list
+                    each item in menu
+                        li.menu__item
+                            a(href=item.href class="menu__link") !{item.name}
+        .header__profile
+            img(src=require('../img/svg/icon_profile.svg'), alt="profile")
+
 
