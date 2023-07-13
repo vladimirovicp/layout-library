@@ -1,1 +1,50 @@
-footer.footer footer
+include ./_mixin
+
+-
+    const social = [
+        {
+            'href': '#',
+            'name': 'twitter',
+            'class': 'twitter'
+        },
+        {
+            'href': '#',
+            'name': 'instagram',
+            'class': 'instagram'
+        },
+        {
+            'href': '#',
+            'name': 'facebook',
+            'class': 'facebook'
+        },
+    ];
+
+footer.footer
+    .container
+        .footer__top
+            .footer__item
+                .address
+                    .address__begin 286 Cadman Plaza, New York,
+                    .address__end NY 11238, United States
+                .social-networks
+                    ul.social-networks__list
+                        each soc in social
+                            li.social-networks__item
+                                a(href=soc.href class="social-networks__link " + soc.class target="_blank" rel="noopener")
+                                    +main-svg('', './img/svg/network-sprite.svg#' + soc.class)
+            .footer__item
+                .day-time
+                    .day Mon - Fri
+                    .time 08:00 am - 07:00 pm
+                .day-time
+                    .day Sat - Sun
+                    .time 10:00 am - 06:00 pm
+
+        hr
+        .footer__bottom
+            div 2023
+            div
+                a(href="#") The Rolling Scopes School
+            div Username
+
+

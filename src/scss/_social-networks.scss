@@ -1,0 +1,32 @@
+.social-networks{
+
+  &__list{
+    display: flex;
+    padding: 0;
+  }
+
+  &__item{
+    list-style: none;
+    margin-left: 0;
+
+    &:not(:last-child){
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link{
+    svg{
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: #F5EFDB;
+      transition: fill .5s;
+    }
+
+    &:hover{
+      svg{
+        fill: $yellow;
+      }
+    }
+  }
+
+}
