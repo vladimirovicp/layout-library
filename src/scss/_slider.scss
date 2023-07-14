@@ -1,0 +1,50 @@
+.slider{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 56rem;
+
+  .im {
+    position: absolute;
+    top: 0;
+    width: 45rem;
+  }
+
+  #i3 {left: 47.5rem;}
+
+  #i1, #i2 {left: 0;}
+  #i4, #i5 {left: 95rem;}
+
+  #nz, #vp {position: absolute; top: 280px; cursor: pointer;}
+  #nz {
+    left: 40rem;
+    z-index: 5;
+  }
+  #vp {
+    right: 40rem;
+    z-index: 5;
+  }
+
+  #fon1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: -47.5rem;
+    height: 56rem;
+    background: #FFFFFF;
+  }
+  #fon2 {
+    position: absolute;
+    top: 0;
+    //right: 0;
+    right: -47.5rem;
+    z-index: 5;
+    width: 45rem;
+    height: 56rem;
+    background: #FFFFFF;
+  }
+
+
+
+}
