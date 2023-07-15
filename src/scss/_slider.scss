@@ -1,8 +1,16 @@
 .slider{
+
+  //width: 100%;
   position: relative;
-  width: 100%;
-  margin: 0 auto;
-  height: 56rem;
+
+
+  &__wrapper{
+    width: 100%;
+    height: 56rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
 
   .im {
     position: absolute;
@@ -10,10 +18,13 @@
     width: 45rem;
   }
 
-  #i3 {left: 47.5rem;}
 
-  #i1, #i2 {left: 0;}
-  #i4, #i5 {left: 95rem;}
+  #i1 {left: 0rem;}
+  #i2 {left: 47.5rem;}
+  #i3 {left: 95rem;}
+
+  #i4 {left: 142.5rem;}
+  #i5 {left: 142.5rem;}
 
   #nz, #vp {position: absolute; top: 280px; cursor: pointer;}
   #nz {
@@ -25,26 +36,25 @@
     z-index: 5;
   }
 
-  #fon1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    width: -47.5rem;
-    height: 56rem;
-    background: #FFFFFF;
+}
+
+
+@media (max-width: 48em) {
+  .slider{
+
+
+    &__wrapper{
+      width: 45rem;
+    }
+
+    #nz, #vp {position: absolute; top: 280px; cursor: pointer;}
+    #nz {
+      left: 0rem;
+      z-index: 5;
+    }
+    #vp {
+      right: 0rem;
+      z-index: 5;
+    }
   }
-  #fon2 {
-    position: absolute;
-    top: 0;
-    //right: 0;
-    right: -47.5rem;
-    z-index: 5;
-    width: 45rem;
-    height: 56rem;
-    background: #FFFFFF;
-  }
-
-
-
 }

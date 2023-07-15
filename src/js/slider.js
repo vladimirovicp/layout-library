@@ -3,29 +3,35 @@ addEventListener("load", function()
     document.getElementById("nz").addEventListener("click", nz);
     document.getElementById("vp").addEventListener("click", vp);
 
-    let i=1;
+    const maxSlides = 5;
+    const desktopSlidesQuantity = 3;
+
+    let currentSlides = 1;
+
+    document.getElementById("nz").style.visibility="hidden";
 
     function nz()
     {
         document.getElementById("vp").style.visibility="visible";
-
-        if(i<5)
+        if(currentSlides > 1)
         {
-            document.getElementById("i"+i).style.transition="left 2s";
-            document.getElementById("i"+i).style.left="0";
+            document.getElementById("i"+(currentSlides -1)).style.transition="left 2s";
+            document.getElementById("i"+(currentSlides -1)).style.left="0rem";
 
-            let n=i+1;
+            let n=currentSlides;
             document.getElementById("i"+n).style.transition="left 2s";
             document.getElementById("i"+n).style.left="47.5rem";
 
-            n=i+2;
+            n=currentSlides+1;
             document.getElementById("i"+n).style.transition="left 2s";
-            document.getElementById("i"+n).style.left="47.5rem";
+            document.getElementById("i"+n).style.left="95rem";
 
-            //i++;
-            i = i + 2;
+            n=currentSlides+2;
+            document.getElementById("i"+n).style.transition="left 2s";
+            document.getElementById("i"+n).style.left="142.5rem";
+            currentSlides --
 
-            if(i==5)
+            if(currentSlides==1)
                 document.getElementById("nz").style.visibility="hidden";
         }
     }
@@ -33,24 +39,25 @@ addEventListener("load", function()
     function vp()
     {
         document.getElementById("nz").style.visibility="visible";
-
-        if(i>1)
+        if(currentSlides < ( maxSlides - 2))
         {
-            document.getElementById("i"+i).style.transition="left 2s";
-            document.getElementById("i"+i).style.left="95rem";
 
-            let n=i-1;
-            document.getElementById("i"+n).style.transition="left 2s";
-            document.getElementById("i"+n).style.left="47.5rem";
+            document.getElementById("i"+currentSlides).style.transition="left 2s";
+            document.getElementById("i"+currentSlides).style.left="-47.5rem";
 
-            n=i-2;
-            document.getElementById("i"+n).style.transition="left 2s";
-            document.getElementById("i"+n).style.left="47.5rem";
+            document.getElementById("i"+ (currentSlides+1)).style.transition="left 2s";
+            document.getElementById("i"+ (currentSlides+1)).style.left="0rem";
 
-            //i--
-            i = i - 2;
+            document.getElementById("i"+ (currentSlides+2)).style.transition="left 2s";
+            document.getElementById("i"+ (currentSlides+2)).style.left="47.5rem";
 
-            if(i==1)
+            document.getElementById("i"+ (currentSlides+3)).style.transition="left 2s";
+            document.getElementById("i"+ (currentSlides+3)).style.left="95rem";
+
+            currentSlides++;
+
+
+            if(currentSlides == (maxSlides - desktopSlidesQuantity + 1) )
                 document.getElementById("vp").style.visibility="hidden";
         }
     }
