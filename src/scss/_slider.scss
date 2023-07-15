@@ -2,6 +2,7 @@
 
   //width: 100%;
   position: relative;
+  padding-bottom: 9.6rem;
 
 
   &__wrapper{
@@ -36,12 +37,44 @@
     z-index: 5;
   }
 
+  &__pagination{
+
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+
+  &__bullet{
+    width: 1.6rem;
+    height: 1.6rem;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: $dark2;
+
+    &.active{
+      background-color: $yellow;
+    }
+
+    &:not(:first-child){
+      margin-left: 1rem;
+    }
+  }
+
+  &__button-prev{
+
+  }
+
+  &__button-next{
+
+  }
+
 }
 
 
 @media (max-width: 48em) {
   .slider{
-
 
     &__wrapper{
       width: 45rem;

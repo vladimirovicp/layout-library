@@ -1,4 +1,23 @@
 .title{
-  //padding: 2rem 0 6.1rem;
-  margin: 2rem 0 6.1rem;
+  padding: 2rem 0 4.1rem;
+  //margin: 2rem 0 6.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 5rem;
+      height: 0.1rem;
+      background-color: $dark2;
+      bottom: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  }
 }

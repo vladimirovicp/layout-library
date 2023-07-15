@@ -66,6 +66,15 @@ a{
   font-size: 2rem;
 }
 
+p{
+  margin: 0;
+  padding: 2rem 0;
+}
+
+.text-center{
+  text-align: center;
+}
+
 @media (max-width: 48em) {
 
   html {
