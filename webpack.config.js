@@ -88,6 +88,10 @@ module.exports = {
                 test: /\.(gif|png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
             },
+            {
+                test: /\.(ico)$/i,
+                type: 'asset/resource',
+            },
 
             //load fonts
             {
