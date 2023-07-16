@@ -2,9 +2,8 @@ extends layout/main
 
 block variables_layout
     -
-        let title = 'Brooklyn Public Library'
+        let title = 'Brooklyn Public Library';
         let curPage = '/';
-
 block content
         main
             include section/welcome
@@ -13,4 +12,7 @@ block content
             include section/coffee-shop
             include section/our-contacts
             include section/digital
+
+        .pug-download-svg(style="display:none;")
+            img(src=require('./img/svg/network-sprite.svg'), alt="")
 

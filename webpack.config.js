@@ -37,7 +37,9 @@ module.exports = {
     },
     plugins: [
         new HTMLWebpackPlugin({
+            favicon: "./favicon.ico",
             template:  path.resolve(__dirname, 'src/index.pug'),
+            //inject: 'head',
             filename: "index.html",
         }),
 
@@ -76,7 +78,7 @@ module.exports = {
                     loader: MiniCssExtractPlugin.loader,
                     options: {
                         publicPath: (resourcePath, context) => {
-                            return path.relative(path.dirname(resourcePath), context) + '/';
+                            return path.relative(path.dirname(resourcePath), context) + '../';
                         },
                     }
                 },
