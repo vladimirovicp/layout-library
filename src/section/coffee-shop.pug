@@ -1,4 +1,73 @@
+-
+    const coffeeTea = [
+        {
+            'name': 'Cold Brew Coffee',
+            'price': '3'
+        },
+        {
+            'name': 'French Press Pot',
+            'price': '5'
+        },
+        {
+            'name': 'Espresso',
+            'price': '2'
+        },
+        {
+            'name': 'Cappuccino',
+            'price': '4'
+        },
+        {
+            'name': 'Hot tea',
+            'price': '2'
+        },
+        {
+            'name': 'Cold tea',
+            'price': '2'
+        }
+    ];
+
+    const dessertsCakes = [
+        {
+            'name': 'Forest Gateau',
+            'price': '16'
+        },
+        {
+            'name': 'Blue Moon',
+            'price': '16'
+        },
+        {
+            'name': 'Truffle Cake',
+            'price': '15'
+        },
+        {
+            'name': 'Chocolate Cake',
+            'price': '18'
+        },
+        {
+            'name': 'Poet’s Dream Cake',
+            'price': '16'
+        },
+        {
+            'name': 'Pineapple Cake',
+            'price': '14'
+        }
+    ];
+
 section.coffee-shop
     .container
         .title
             h2 Coffee shop
+        p.text-center In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. You can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.
+
+        .coffee-shop__wrapper
+            .coffee-shop__item
+                h3.coffee-shop__item-title Coffee & Tea
+                .coffee-shop__price
+                    each item in coffeeTea
+                        .coffee-shop__price-item
+                            div !{item.name}
+                            .coffee-shop__price-separator
+                            div $!{item.price}
+
+            .coffee-shop__item
+                h3.coffee-shop__item-title Desserts & Cakes
