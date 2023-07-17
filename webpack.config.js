@@ -38,8 +38,7 @@ module.exports = {
     plugins: [
         new HTMLWebpackPlugin({
             favicon: "./favicon.ico",
-            template:  path.resolve(__dirname, 'src/index.pug'),
-            //inject: 'head',
+            template: path.resolve(__dirname, 'src/index.pug'),
             filename: "index.html",
         }),
 
@@ -48,9 +47,26 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: `./css/${filename('css')}`,
         }),
+
+        new FileManagerPlugin({
+            events: {
+                onStart: {
+                    delete: ['dist'],
+                },
+                onEnd: {
+                    copy: [
+                        {
+                            source: path.join(__dirname, 'src/img/sprite-images'),
+                            destination: path.join(__dirname, 'dist/img/sprite-images'),
+                        },
+                    ],
+                },
+            },
+        }),
+
     ],
 
-    module:{
+    module: {
         rules: [
             {
                 test: /\.html$/,
