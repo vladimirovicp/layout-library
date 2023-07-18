@@ -65,9 +65,15 @@ section.coffee-shop
                 .coffee-shop__price
                     each item in coffeeTea
                         .coffee-shop__price-item
-                            div !{item.name}
-                            .coffee-shop__price-separator
-                            div $!{item.price}
+                            div.coffee-shop__name !{item.name}
+                            .coffee-shop__separator
+                            div.coffee-shop__cost $!{item.price}
 
             .coffee-shop__item
                 h3.coffee-shop__item-title Desserts & Cakes
+                .coffee-shop__price
+                    each item in dessertsCakes
+                        .coffee-shop__price-item
+                            div.coffee-shop__name !{item.name}
+                            .coffee-shop__separator
+                            div.coffee-shop__cost $!{item.price}

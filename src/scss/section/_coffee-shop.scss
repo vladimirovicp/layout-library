@@ -1,28 +1,52 @@
 .coffee-shop{
 
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item{
+    &-title{
+      font-family: Forum,sans-serif;
+      color: $yellow;
+    }
+
+    &:nth-child(even){
+      text-align: right;
+    }
+  }
+
   &__price{
     &-item{
       display: grid;
-      grid-template-columns: 19.7rem 10rem 2.1rem;
-      gap: 6rem 4rem;
+      grid-template-columns: auto 10rem minmax(2.1rem, 3.1rem);
+      gap: 6rem;
 
-
-
-    }
-
-    &-separator{
-      position: relative;
-      &:after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        background-color: red;
-        display: block;
-        top:50%;
-        transform: translateY(-50%);
+      &:not(:last-child){
+        padding-bottom: 4rem;
       }
     }
+  }
+
+  &__name{
+
+  }
+  &__separator{
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $yellow;
+      display: block;
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__cost{
+    font-family: Forum,sans-serif;
   }
 
 }
