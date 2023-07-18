@@ -2,3 +2,25 @@ section.digital
     .container
         .title
             h2 Digital Library Cards
+        .digital__wrapper
+            .digital__form-block
+                .digital__form-title Find your Library card
+                .digital__form-wrapper
+                    form(role='form' method='GET' action='#' class="digital__form")
+                        .digital__form-group
+                            .digital__form-name Brooklyn Public Library
+                            input.digital__form-control(type='text', placeholder="Reader's name")
+                            input.digital__form-control(type='text', placeholder='Card number')
+
+                        button.digital__form-btn(type="submit", name="asdf") Check the card
+
+
+
+
+            .digital__info-card
+                .digital__info-title Get a reader card
+                .digital__info-text  You will be able to see a reader card after logging into account or you can register a new account
+                .digital__info-btns
+                    button.digital__info-btn-up Sign Up
+                    button.digital__info-btn-in Log in
+

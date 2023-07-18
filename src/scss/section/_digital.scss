@@ -1,3 +1,88 @@
 .digital{
+  padding-bottom: 4rem;
 
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__form{
+    padding-bottom: 3rem;
+
+    &-block{
+
+    }
+
+    &-title{
+      font-size: 3rem;
+      letter-spacing: 0.06rem;
+      text-align: center;
+      padding-bottom: 3rem;
+      line-height: normal;
+    }
+
+    &-name{
+      font-family: Forum,sans-serif;
+      font-size: 3rem;
+      line-height: 166.667%;
+      letter-spacing: 0.06rem;
+      margin-bottom: 2rem;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    &-wrapper{
+      border: .3rem solid $yellow;
+
+    }
+
+    &-group{
+      width: 56rem;
+      background-color: $yellow;
+      margin: 2rem 2rem 2rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-control{
+
+    }
+
+    &-btn{
+      padding-left: 4rem;
+      padding-right: 4rem;
+      display: block;
+      margin: 0 auto;
+    }
+
+  }
+
+  &__info{
+    &-card{
+      max-width: 45.6rem;
+      text-align: right;
+    }
+
+    &-title{
+      font-family: Forum,sans-serif;
+      padding-bottom: 3.5rem;
+      font-size: 3rem;
+      letter-spacing: 0.06rem;
+    }
+
+    &-text{
+      letter-spacing: 0.04rem;
+      padding-bottom: 3.5rem;
+    }
+
+    &-btns{
+      button{
+
+        &:not(:last-child){
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
 }
