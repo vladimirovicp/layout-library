@@ -31,7 +31,7 @@
             'by': 'By Clive Irving',
             'description': 'A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.',
             'name_mage': '16'
-        },
+        }
 
     ];
 
@@ -44,17 +44,25 @@ section.favorites
 
         .book
             .favorites__form
-                form(role='form' method='GET' action='#' class="favorites__form-book")
+                form(method='GET' action='#' class="favorites__form-book")
+                    .form__group-radio
+                        input(type='radio',  id="winter" class="form__input-radio" name="season" checked)
+                        label(for="winter" class="form__label-radio")
+                            span.form__button-radio
+                            | Winter
                     .favorites__group
-                        input(type='radio',  id="winter" name="season")
-                        label(for="winter") Winter
+                        input(type='radio',  id="spring" class="form__input-radio" name="season")
+                        label(for="spring" class="form__label-radio")
+                            span.form__button-radio
+                            |Spring
                     .favorites__group
-                        input(type='radio',  id="spring" name="season")
-                        label(for="spring") Spring
+                        input(type='radio',  id="summer" class="form__input-radio" name="season")
+                        label(for="summer" class="form__label-radio")
+                            span.form__button-radio
+                            |Summer
                     .favorites__group
-                        input(type='radio',  id="summer" name="season")
-                        label(for="summer") Summer
-                    .favorites__group
-                        input(type='radio',  id="autumn" name="season")
-                        label(for="autumn") Autumn
+                        input(type='radio',  id="autumn" class="form__input-radio" name="season")
+                        label(for="autumn" class="form__label-radio")
+                            span.form__button-radio
+                            |Autumn
 

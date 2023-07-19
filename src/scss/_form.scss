@@ -1,0 +1,56 @@
+.form{
+  &__group{
+    &-radio{
+
+    }
+  }
+
+
+  &__button{
+    &-radio{
+      height: 1.8rem;
+      width: 1.8rem;
+      border-radius: 50%;
+      border: .2rem solid $dark1;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &::after{
+        content:"";
+        display: block;
+        height: .7rem;
+        width: .7rem;
+        border-radius: 50%;
+        background: $dark1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+        transition: .2s all;
+      }
+    }
+  }
+
+  &__label{
+    &-radio{
+      position: relative;
+      cursor: pointer;
+      padding-left: 4rem;
+    }
+  }
+
+  &__input{
+    &-radio{
+      display: none;
+
+      &:checked ~ .form__label-radio .form__button-radio::after{
+        opacity: 1
+      }
+    }
+  }
+
+}
