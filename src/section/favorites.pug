@@ -1,4 +1,60 @@
+-
+    const book = [
+        {
+            'top_text': "Staff Picks",
+            'season': 'Winter',
+            'name': 'The Book Eaters',
+            'by': 'By Sunyi Dean',
+            'description': 'An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.',
+            'name_mage':'13'
+        },
+        {
+            'top_text': "Staff Picks",
+            'season': 'Winter',
+            'name': 'Cackle',
+            'by': 'By Rachel Harrison',
+            'description': 'Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.',
+            'name_mage': '14'
+        },
+        {
+            'top_text': "Staff Picks",
+            'season': 'Winter',
+            'name': 'Dante: Poet of the Secular World',
+            'by': 'By Erich Auerbach',
+            'description': 'Auerbach\'s engaging book places the \'Comedy\' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante\'s uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante\'s main themes.',
+            'name_mage': '15'
+        },
+        {
+            'top_text': "Staff Picks",
+            'season': 'Winter',
+            'name': 'The Last Queen',
+            'by': 'By Clive Irving',
+            'description': 'A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.',
+            'name_mage': '16'
+        },
+
+    ];
+
 section.favorites
     .container
         .title
             h2 Favorites
+
+        .bold Pick favorites of season
+
+        .book
+            .favorites__form
+                form(role='form' method='GET' action='#' class="favorites__form-book")
+                    .favorites__group
+                        input(type='radio',  id="winter" name="season")
+                        label(for="winter") Winter
+                    .favorites__group
+                        input(type='radio',  id="spring" name="season")
+                        label(for="spring") Spring
+                    .favorites__group
+                        input(type='radio',  id="summer" name="season")
+                        label(for="summer") Summer
+                    .favorites__group
+                        input(type='radio',  id="autumn" name="season")
+                        label(for="autumn") Autumn
+
