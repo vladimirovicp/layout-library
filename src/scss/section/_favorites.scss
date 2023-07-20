@@ -3,7 +3,88 @@
 
     &-book{
       display: flex;
-      gap: 9rem
+      gap: 9rem;
+      padding-bottom: 4rem;
     }
   }
+
+  &__cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  &__card{
+    width: 59rem;
+    padding: 0  2rem;
+    position: relative;
+
+
+    &-wrapper{
+
+      padding-left: 1.5rem;
+      padding-right: 17.5rem;
+      padding-bottom: 1.5rem;
+      border: .1rem solid $dark1;
+      height: 55.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    &-staff{
+      font-family: Forum,sans-serif;
+      padding-bottom: 2rem;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        width: 5rem;
+        height: 0.1rem;
+        background-color: $yellow;
+        bottom: 2rem;
+        left: 0;
+      }
+    }
+    &-name,&-by{
+      font-size: 1.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &-name{
+      padding-bottom: 1rem;
+    }
+
+    &-by{
+      padding-bottom: 2rem;
+    }
+
+    &-description{
+      font-size: 15px;
+      text-transform: capitalize;
+      line-height: 266.667%;
+      padding-bottom: 1.5rem;
+    }
+    &-img{
+      width: 20rem;
+      height: 30rem;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    &-btn{
+      margin-right: auto;
+      margin-top: auto;
+
+      &.active{
+        color: $yellow;
+        border-color: $yellow;
+
+      }
+    }
+  }
+
 }

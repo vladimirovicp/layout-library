@@ -6,7 +6,8 @@
             'name': 'The Book Eaters',
             'by': 'By Sunyi Dean',
             'description': 'An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.',
-            'name_mage':'13'
+            'name_image':'13'
+
         },
         {
             'top_text': "Staff Picks",
@@ -14,7 +15,7 @@
             'name': 'Cackle',
             'by': 'By Rachel Harrison',
             'description': 'Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.',
-            'name_mage': '14'
+            'name_image': '14'
         },
         {
             'top_text': "Staff Picks",
@@ -22,7 +23,7 @@
             'name': 'Dante: Poet of the Secular World',
             'by': 'By Erich Auerbach',
             'description': 'Auerbach\'s engaging book places the \'Comedy\' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante\'s uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante\'s main themes.',
-            'name_mage': '15'
+            'name_image': '15'
         },
         {
             'top_text': "Staff Picks",
@@ -30,7 +31,8 @@
             'name': 'The Last Queen',
             'by': 'By Clive Irving',
             'description': 'A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.',
-            'name_mage': '16'
+            'name_image': '16',
+            'btn': 'active'
         }
 
     ];
@@ -65,4 +67,23 @@ section.favorites
                         label(for="autumn" class="form__label-radio")
                             span.form__button-radio
                             |Autumn
+            .favorites__cards
+                each item in book
+                    .favorites__card
+                        .favorites__card-wrapper
+                            .favorites__card-staff !{item.top_text}
+                            .favorites__card-name !{item.name}
+                            .favorites__card-by !{item.by}
+                            .favorites__card-description !{item.description}
+
+                            if item.btn == 'active'
+                                button.favorites__card-btn.active(type="submit") Own
+                            else
+                                button.favorites__card-btn(type="submit") Buy
+
+                            .favorites__card-img
+                                img(src=require('/img/favorites/'+ item.name_image +'.jpg'), class="im" id="i1" alt="photo")
+
+
+
 
