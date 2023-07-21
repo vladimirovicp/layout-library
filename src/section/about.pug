@@ -1,8 +1,8 @@
-section.about
+section#about.about
     .container
         .title
             h2 About
-        p.text-center The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside
+        p.text-center.about__text The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside
 
         .slider
             .slider__wrapper
@@ -23,9 +23,12 @@ section.about
                 img(src=require('/img/svg/arrow/arrow-right.svg'), id="vp" alt="Вперед")
 
             .slider__pagination
-                span.slider__bullet.active
-                span.slider__bullet
-                span.slider__bullet
+                .slider__bullet.active
+                    span
+                .slider__bullet
+                    span
+                .slider__bullet
+                    span
 
 
 

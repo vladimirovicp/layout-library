@@ -40,26 +40,39 @@
   &__pagination{
 
     position: absolute;
-    bottom: 4rem;
+    bottom: 3.2rem;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
 
   }
 
   &__bullet{
-    width: 1.6rem;
-    height: 1.6rem;
-    display: inline-block;
-    border-radius: 50%;
-    background-color: $dark2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 2.6rem;
+    height: 2.6rem;
+
+    span{
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      background-color: $dark2;
+      display: inline-block;
+
+    }
 
     &.active{
-      background-color: $yellow;
+      span{
+        background-color: $yellow;
+      }
     }
 
-    &:not(:first-child){
-      margin-left: 1rem;
-    }
+    //&:not(:first-child){
+    //  margin-left: 1rem;
+    //}
   }
 
   &__button-prev{
@@ -73,21 +86,21 @@
 }
 
 
-@media (max-width: 48em) {
-  .slider{
-
-    &__wrapper{
-      width: 45rem;
-    }
-
-    #nz, #vp {position: absolute; top: 280px; cursor: pointer;}
-    #nz {
-      left: 0rem;
-      z-index: 5;
-    }
-    #vp {
-      right: 0rem;
-      z-index: 5;
-    }
-  }
-}
+//@media (max-width: 48em) {
+//  .slider{
+//
+//    &__wrapper{
+//      width: 45rem;
+//    }
+//
+//    #nz, #vp {position: absolute; top: 280px; cursor: pointer;}
+//    #nz {
+//      left: 0rem;
+//      z-index: 5;
+//    }
+//    #vp {
+//      right: 0rem;
+//      z-index: 5;
+//    }
+//  }
+//}

@@ -39,7 +39,10 @@
     &-radio{
       position: relative;
       cursor: pointer;
-      padding-left: 4rem;
+      padding-left: 3.8rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      letter-spacing: 0;
     }
   }
 
@@ -47,9 +50,14 @@
     &-radio{
       display: none;
 
-      &:checked ~ .form__label-radio .form__button-radio::after{
-        opacity: 1
+      &:checked ~ .form__label-radio {
+        font-weight: bold;
+        .form__button-radio::after{
+          opacity: 1
+        }
       }
+
+
     }
   }
 

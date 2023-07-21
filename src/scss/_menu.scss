@@ -9,6 +9,7 @@
 
   &__item{
     list-style: none;
+    letter-spacing: 0;
     &:not(:last-child){
       margin-right:3rem;
     }
@@ -20,27 +21,27 @@
 
 }
 
-@media (max-width: 48em) {
-  .menu{
-
-    .container{
-      position: relative;
-    }
-
-    &__wrapper{
-      position: absolute;
-      justify-content: center;
-      align-items: stretch;
-      //background-color: $color5;
-      padding: 6rem 0;
-      top: 0;
-      left: 0;
-      width: 100%;
-      transition: top 0.5s ease 0s;
-      overflow: auto;
-      flex-direction: column;
-
-    }
-
-  }
-}
+//@media (max-width: 48em) {
+//  .menu{
+//
+//    .container{
+//      position: relative;
+//    }
+//
+//    &__wrapper{
+//      position: absolute;
+//      justify-content: center;
+//      align-items: stretch;
+//      //background-color: $color5;
+//      padding: 6rem 0;
+//      top: 0;
+//      left: 0;
+//      width: 100%;
+//      transition: top 0.5s ease 0s;
+//      overflow: auto;
+//      flex-direction: column;
+//
+//    }
+//
+//  }
+//}

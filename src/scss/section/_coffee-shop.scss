@@ -1,4 +1,5 @@
 .coffee-shop{
+  padding-bottom: 4rem;
 
   &__wrapper{
     display: flex;
@@ -9,6 +10,10 @@
     &-title{
       font-family: Forum,sans-serif;
       color: $yellow;
+      font-size: 4rem;
+      margin: 0;
+      padding-bottom: 2rem;
+
     }
 
     &:nth-child(even){

@@ -1,5 +1,5 @@
 .title{
-  padding: 2rem 0 4.1rem;
+  padding: 0 0 2rem;
   //margin: 2rem 0 6.1rem;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
       width: 5rem;
       height: 0.1rem;
       background-color: $dark2;
-      bottom: -2rem;
+      bottom: -.2rem;
       left: 50%;
       transform: translateX(-50%);
 

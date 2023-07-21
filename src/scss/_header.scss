@@ -17,19 +17,24 @@
     font-family: 'Forum', sans-serif;
     font-size: 3rem;
     letter-spacing: 0.6px;
+
   }
 
   &__menu {
     margin-left: auto;
   }
-}
 
-@media (max-width: 48em) {
-
-  .header {
-    &__site-name {
-      font-size: 6rem;
-    }
+  &__profile{
+    display: flex;
   }
-
 }
+
+//@media (max-width: 48em) {
+//
+//  .header {
+//    &__site-name {
+//      font-size: 6rem;
+//    }
+//  }
+//
+//}
