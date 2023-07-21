@@ -104,6 +104,43 @@
             'description': 'An epic saga of seven generations of one family encompasses the tumultuous history of Hawaii as a Hawaiian woman gathers her four granddaughters together in an erotic tale of villains and dreamers, queens and revolutionaries, lepers and healers.',
             'name_image': '8',
             'none': true
+        },
+
+        {
+            'top_text': "Staff Picks",
+            'season': 'Autumn',
+            'name': 'Casual Conversation',
+            'by': 'By Renia White',
+            'description': 'White\'s impressive debut collection takes readers through and beyond the concepts of conversation and the casual - both what we say to each other and what we don\'t, examining the possibilities around how we construct and communicate identity. ',
+            'name_image': '9',
+            'none': true
+        },
+        {
+            'top_text': "Staff Picks",
+            'season': 'Autumn',
+            'name': 'The Great Fire',
+            'by': 'By Lou Ureneck',
+            'description': 'The harrowing story of an ordinary American and a principled Naval officer who, horrified by the burning of Smyrna, led an extraordinary rescue effort that saved a quarter of a million refugees from the Armenian Genocide',
+            'name_image': '10',
+            'none': true
+        },
+        {
+            'top_text': "Staff Picks",
+            'season': 'Autumn',
+            'name': 'Rickey: The Life and Legend',
+            'by': 'By Howard Bryant',
+            'description': 'With the fall rolling around, one can\'t help but think of baseball\'s postseason coming up! And what better way to prepare for it than reading the biography of one of the game\'s all-time greatest performers, the Man of Steal, Rickey Henderson?',
+            'name_image': '11',
+            'none': true
+        },
+        {
+            'top_text': "Staff Picks",
+            'season': 'Autumn',
+            'name': 'Slug: And Other Stories',
+            'by': 'By Megan Milks',
+            'description': 'Exes Tegan and Sara find themselves chained together by hairballs of codependency. A father and child experience the shared trauma of giving birth to gods from their wounds.',
+            'name_image': '12',
+            'none': true
         }
 
     ];
@@ -140,20 +177,22 @@ section#favorites.favorites
                             |Autumn
             .favorites__cards
                 each item in book
-                    .favorites__card
-                        .favorites__card-wrapper
-                            .favorites__card-staff !{item.top_text}
-                            .favorites__card-name !{item.name}
-                            .favorites__card-by !{item.by}
-                            .favorites__card-description !{item.description}
+                    if item.none === true
+                        .favorites__card.none
+                    else
+                        .favorites__card
+                            .favorites__card-wrapper
+                                .favorites__card-staff !{item.top_text}
+                                .favorites__card-name !{item.name}
+                                .favorites__card-by !{item.by}
+                                .favorites__card-description !{item.description}
 
-                            if item.btn == 'active'
-                                button.favorites__card-btn.active(type="submit") Own
-                            else
-                                button.favorites__card-btn(type="submit") Buy
-
-                            .favorites__card-img
-                                img(src=require('/img/favorites/'+ item.name_image +'.jpg'), class="im" id="i1" alt="photo")
+                                if item.btn == 'active'
+                                    button.favorites__card-btn.active(type="submit") Own
+                                else
+                                    button.favorites__card-btn(type="submit") Buy
+                                .favorites__card-img
+                                        img(src=require('/img/favorites/'+ item.name_image +'.jpg'), alt="photo")
 
 
 
