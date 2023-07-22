@@ -16,6 +16,15 @@
     }
   }
 
+  &__item{
+    a{
+      color: $dark1;
+      &:hover{
+        color: $yellow;
+      }
+    }
+  }
+
   &__info{
     padding-bottom: 4rem;
     font-weight: bold;

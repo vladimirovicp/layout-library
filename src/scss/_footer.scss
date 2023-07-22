@@ -5,12 +5,13 @@
   &__top{
     display: flex;
     justify-content: space-between;
-    padding: 2rem 0 3rem;
-    line-height: 133.333%;
+    padding: 2rem 0 .6rem;
+    line-height: 135%;
     font-size: 1.5rem;
+    letter-spacing: 0;
 
     .address{
-      padding-bottom: 1rem;
+      padding-bottom: .4rem;
     }
 
     .day-time{
@@ -25,6 +26,10 @@
   &__bottom{
     display: flex;
     justify-content: space-between;
-    padding: 4.4rem 0;
+    padding: 2.5rem 0 3.5rem;
+  }
+
+  &__name-course{
+    margin-left: 5.6rem;
   }
 }

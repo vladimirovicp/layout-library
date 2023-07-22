@@ -94,13 +94,14 @@
       margin-top: auto;
       font-size: 1rem;
 
-      &.active{
-        color: $yellow;
-        border-color: $yellow;
+      &.disabled{
+        //color: $yellow;
+        //border-color: $yellow;
+        //pointer-events: none;
 
-        &:hover{
-          color: $dark1;
-        }
+        //&:hover{
+        //  color: $dark1;
+        //}
       }
     }
   }

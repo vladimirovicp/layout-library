@@ -188,7 +188,7 @@ section#favorites.favorites
                                 .favorites__card-description !{item.description}
 
                                 if item.btn == 'active'
-                                    button.favorites__card-btn.active(type="submit") Own
+                                    button.favorites__card-btn.disabled(type="submit" disabled="disabled") Own
                                 else
                                     button.favorites__card-btn(type="submit") Buy
                                 .favorites__card-img
