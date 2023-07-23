@@ -2,17 +2,17 @@ include ./_mixin
 -
     const social = [
         {
-            'href': '#',
+            'href': 'https://twitter.com/html5doctor',
             'name': 'twitter',
             'class': 'twitter'
         },
         {
-            'href': '#',
+            'href': 'https://www.instagram.com/beeple_crap',
             'name': 'instagram',
             'class': 'instagram'
         },
         {
-            'href': '#',
+            'href': 'https://www.facebook.com/directory/groups/I-620554-620736',
             'name': 'facebook',
             'class': 'facebook'
         },
@@ -22,7 +22,7 @@ footer.footer
     .container
         .footer__top
             .footer__item
-                .address
+                a(href="https://www.google.ru/maps/@40.6956591,-73.9916167,20z?entry=ttu" class="address" target="_blank")
                     .address__begin 286 Cadman Plaza, New York,
                     .address__end NY 11238, United States
                 .social-networks
@@ -43,7 +43,8 @@ footer.footer
         .footer__bottom
             div 2023
             .footer__name-course
-                a(href="#") The Rolling Scopes School
-            div Username
+                a(href="https://rs.school/" target="_blank") The Rolling Scopes School
+            div
+                a(href="https://github.com/vladimirovicp" target="_blank") vladimirovicp
 
 

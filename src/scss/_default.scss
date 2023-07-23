@@ -78,7 +78,7 @@ p{
 input[type="text"]{
   font-family: Forum,sans-serif;
   border-radius: 1rem;
-  border: none;
+  border: .2rem solid transparent;
   width: 100%;
   height: 6.6rem;
   padding: .8rem 2rem;
@@ -87,9 +87,22 @@ input[type="text"]{
   font-size:3rem;
   &::placeholder{
     color: #8E8E8E;
-
     letter-spacing: 0.06rem;
   }
+
+  &:focus{
+    border: .2rem solid transparent;
+    outline: none;
+  }
+
+  &:invalid{
+    border: .2rem solid red!important;
+  }
+
+  &:valid {
+    //border-color: green;
+  }
+
 }
 
 button{
