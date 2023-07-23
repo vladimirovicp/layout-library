@@ -9,8 +9,8 @@ section#digital.digital
                     form(role='form' method='GET' action='#' class="digital__form")
                         .digital__form-group
                             .digital__form-name Brooklyn Public Library
-                            input.digital__form-control(type='text', placeholder="Reader's name" pattern="[A-Za-z]{1,15}\.[A-Za-z]{1,15}")
-                            input.digital__form-control(type='text', placeholder='Card number' pattern="[A-Za-z0-9]{9}")
+                            input.digital__form-control(name='name', type="text", placeholder="Reader's name", pattern="[A-Za-z]{1,15}\.[A-Za-z]{1,15}")
+                            input.digital__form-control(name='card', type="text", placeholder='Card number', pattern="[A-Za-z0-9]{9}")
 
                         button.digital__form-btn(type="submit", name="asdf") Check the card
             .digital__info-card

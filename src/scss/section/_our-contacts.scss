@@ -19,9 +19,14 @@
   &__item{
     a{
       color: $dark1;
+      margin-left: .9rem;
       &:hover{
         color: $yellow;
       }
+    }
+    img{
+      width: 69.6rem;
+      height: auto;
     }
   }
 

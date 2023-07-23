@@ -2,11 +2,15 @@
   "name": "layout-library",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://vladimirovicp.github.io/layout-library",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
-    "start": "cross-env NODE_ENV=development webpack serve --mode development"
+    "start": "cross-env NODE_ENV=development webpack serve --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+
   },
   "repository": {
     "type": "git",
@@ -29,16 +33,17 @@
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "filemanager-webpack-plugin": "^8.0.0",
+    "gh-pages": "^5.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.6",
     "node-sass": "^7.0.3",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
     "sass-loader": "^13.0.2",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.11.1",
-    "mini-css-extract-plugin": "^2.7.6"
+    "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
