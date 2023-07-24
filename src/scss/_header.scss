@@ -3,8 +3,6 @@
 .header {
   background-color: $dark1;
   color: $light;
-
-
   .container {
     display: flex;
     justify-content: space-between;
@@ -12,29 +10,32 @@
     height: 9rem;
     gap: 4rem;
   }
-
   &__site-name {
     font-family: 'Forum', sans-serif;
     font-size: 3rem;
     letter-spacing: 0.6px;
-
   }
-
   &__menu {
     margin-left: auto;
   }
-
   &__profile{
     display: flex;
   }
 }
 
-//@media (max-width: 48em) {
-//
-//  .header {
-//    &__site-name {
-//      font-size: 6rem;
-//    }
-//  }
-//
-//}
+@media (max-width: 48em) {
+
+  .header {
+    position: relative;
+    &__site-name {
+
+    }
+
+    &__profile{
+      z-index: 5;
+    }
+
+
+  }
+
+}

@@ -2,7 +2,7 @@
   "name": "layout-library",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://vladimirovicp.github.io/layout-library",
+  "homepage": "https://github.com/vladimirovicp/layout-library#readme",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
@@ -10,7 +10,6 @@
     "start": "cross-env NODE_ENV=development webpack serve --mode development",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-
   },
   "repository": {
     "type": "git",
@@ -22,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/vladimirovicp/layout-library/issues"
   },
-  "homepage": "https://github.com/vladimirovicp/layout-library#readme",
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",

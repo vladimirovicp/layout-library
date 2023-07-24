@@ -1,11 +1,11 @@
-.slider{
+.slider {
 
   //width: 100%;
   position: relative;
   padding-bottom: 9.6rem;
 
 
-  &__wrapper{
+  &__wrapper {
     width: 100%;
     height: 56rem;
     margin: 0 auto;
@@ -20,24 +20,27 @@
   }
 
 
-  #i1 {left: 0rem;}
-  #i2 {left: 47.5rem;}
-  #i3 {left: 95rem;}
-
-  #i4 {left: 142.5rem;}
-  #i5 {left: 142.5rem;}
-
-  #nz, #vp {position: absolute; top: 280px; cursor: pointer;}
-  #nz {
-    left: 40rem;
-    z-index: 5;
-  }
-  #vp {
-    right: 40rem;
-    z-index: 5;
+  #i1 {
+    left: 0rem;
   }
 
-  &__pagination{
+  #i2 {
+    left: 47.5rem;
+  }
+
+  #i3 {
+    left: 95rem;
+  }
+
+  #i4 {
+    left: 142.5rem;
+  }
+
+  #i5 {
+    left: 142.5rem;
+  }
+
+  &__pagination {
 
     position: absolute;
     bottom: 3.2rem;
@@ -47,7 +50,7 @@
 
   }
 
-  &__bullet{
+  &__bullet {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,7 +58,7 @@
     width: 2.6rem;
     height: 2.6rem;
 
-    span{
+    span {
       width: 1.6rem;
       height: 1.6rem;
       border-radius: 50%;
@@ -64,8 +67,8 @@
 
     }
 
-    &.active{
-      span{
+    &.active {
+      span {
         background-color: $yellow;
       }
     }
@@ -75,32 +78,74 @@
     //}
   }
 
-  &__button-prev{
+  &__button-prev,&__button-next{
+    display: none;
+  }
+
+  &__button-prev {
 
   }
 
-  &__button-next{
+  &__button-next {
 
   }
 
 }
 
 
-//@media (max-width: 48em) {
-//  .slider{
-//
-//    &__wrapper{
-//      width: 45rem;
-//    }
-//
-//    #nz, #vp {position: absolute; top: 280px; cursor: pointer;}
-//    #nz {
-//      left: 0rem;
-//      z-index: 5;
-//    }
-//    #vp {
-//      right: 0rem;
-//      z-index: 5;
-//    }
-//  }
-//}
+@media (max-width: 48em) {
+  .slider {
+
+    &__wrapper {
+      width: 45rem;
+    }
+
+    //#nz, #vp {position: absolute; top: 280px; cursor: pointer;}
+    //#nz {
+    //
+    //}
+    //#vp {
+    //
+    //}
+
+    //#nz, #vp {
+    //  position: absolute;
+    //  top: 280px;
+    //  cursor: pointer;
+    //}
+
+    //#nz {
+    //  left: 40rem;
+    //  z-index: 5;
+    //}
+
+    //#vp {
+    //  right: 40rem;
+    //  z-index: 5;
+    //}
+
+    &__button-prev, &__button-next {
+      width: 1.4rem;
+      height: 2.3rem;
+      display: block;
+      position: absolute;
+      top: calc(50% - 4.8rem);
+      transform: translateY(-50%);
+      cursor: pointer;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__button-prev {
+      left: 9.6rem;
+      z-index: 5;
+    }
+
+    &__button-next {
+      right: 9.6rem;
+      z-index: 5;
+    }
+  }
+}

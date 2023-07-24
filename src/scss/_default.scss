@@ -1,8 +1,5 @@
 @import "./abstracts/variable";
 
-
-
-
 *,
 *::before,
 *::after {
@@ -17,7 +14,7 @@ html {
   font-family: 'Inter', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size:0.69444vw;  // 10/ (1440 / 100)
+  font-size: 0.69444vw; // 10/ (1440 / 100)
   line-height: 1;
   margin: 0;
   padding: 0;
@@ -44,40 +41,40 @@ body {
   margin: 0 auto;
 }
 
-h1,h2,h3,h4,h5{
+h1, h2, h3, h4, h5 {
   font-family: 'Forum', sans-serif;
   font-style: normal;
   font-weight: 400;
 }
 
-h1{
+h1 {
   font-size: 3rem;
   letter-spacing: 0.06rem;
 }
 
-h1,h2{
+h1, h2 {
   font-size: 4rem;
 }
 
-a{
+a {
   color: $light;
   text-decoration: none;
   font-size: 2rem;
   transition: color 0.5s;
 
-  &:hover, &:active{
+  &:active {
     color: $yellow;
   }
 }
 
-p{
+p {
   margin: 0;
   padding: 2rem 0;
 }
 
 //input[type="text"]{
-input{
-  font-family: Forum,sans-serif;
+input {
+  font-family: Forum, sans-serif;
   border-radius: 1rem;
   border: .2rem solid transparent;
   width: 100%;
@@ -85,28 +82,20 @@ input{
   padding: .8rem 2rem;
   margin-bottom: 2.5rem;
   background: $light;
-  font-size:3rem;
-  &::placeholder{
+  font-size: 3rem;
+  &::placeholder {
     color: #8E8E8E;
     letter-spacing: 0.06rem;
   }
-
-  &:focus{
+  &:focus {
     border: .2rem solid transparent;
     outline: none;
   }
-
-  &:invalid{
-    border: .2rem solid red!important;
+  &:invalid {
+    border: .2rem solid red !important;
   }
-
-  &:valid {
-    //border-color: green;
-  }
-
 }
-
-button{
+button {
   background: transparent;
   border: .1rem solid $dark2;
   border-radius: .2rem;
@@ -120,59 +109,62 @@ button{
   transition: border 0.5s, background-color 0.5s, color 0.5s;
   font-size: 1rem;
   letter-spacing: .1rem;
-  //display: block;
-
-
-  &:hover{
-    border-color: $yellow;
-    background-color: $yellow;
-  }
-
-  &:disabled{
+  &:disabled {
     color: $yellow;
     border-color: $yellow;
     pointer-events: none;
   }
 }
-
-.bold{
+.bold {
   font-weight: bold;
 }
-.text-center{
+.text-center {
   text-align: center;
 }
-
-.none{
+.none {
   display: none;
 }
 
-//@media (max-width: 48em) {
-//
-//  html {
-//    //font-size: 0.651vw;
-//    font-size:1.34vw;
-//  }
-//
-//  .container {
-//    width: 100%;
-//  }
-//
-//  .is-desktop{
-//    display: none!important;
-//  }
-//}
-//
-//@media (min-width: 48em) {
-//  .is-mobile{
-//    display: none!important;
-//  }
-//}
+@media (hover: hover) {
+  a:hover {
+    color: $yellow;
+  }
+
+  button:hover {
+    border-color: $yellow;
+    background-color: $yellow;
+  }
+}
+
+@media (max-width: 48em) {
+
+  html {
+    //font-size: 0.651vw;
+    //font-size: 1.34vw;
+    font-size: 1.302vw;
+
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .is-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 48.1em) {
+  .is-mobile {
+    display: none !important;
+  }
+}
 
 @media (min-width: 90em) { //1440
 
-    html {
-        font-size:10px;
-    }
+  html {
+    font-size: 10px;
+  }
   .container {
 
   }
