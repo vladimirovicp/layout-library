@@ -129,7 +129,7 @@
       height: 2.3rem;
       display: block;
       position: absolute;
-      top: calc(50% - 4.8rem);
+      top: calc(50% - 3rem);
       transform: translateY(-50%);
       cursor: pointer;
       img{
@@ -139,12 +139,12 @@
     }
 
     &__button-prev {
-      left: 9.6rem;
+      left: 7.6rem;
       z-index: 5;
     }
 
     &__button-next {
-      right: 9.6rem;
+      right: 7.6rem;
       z-index: 5;
     }
   }

@@ -2,9 +2,10 @@
 
 .welcome {
   background-color: $dark1;
-  background-image: url("./img/welcome/bg.jpg");
+  background-image: url("./img/welcome/bg-1920.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   .container {
     height: 60rem;
