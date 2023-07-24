@@ -59,6 +59,10 @@ module.exports = {
                             source: path.join(__dirname, 'src/img/sprite-images'),
                             destination: path.join(__dirname, 'dist/img/sprite-images'),
                         },
+                        {
+                            source: path.join(__dirname, 'src/img/favicon'),
+                            destination: path.join(__dirname, 'dist/img/favicon'),
+                        },
                     ],
                 },
             },
