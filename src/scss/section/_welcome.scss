@@ -2,11 +2,11 @@
 
 .welcome{
     background-color: $dark1;
-  .container{
-    height: 60rem;
     background-image: url("./img/welcome/bg.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+  .container{
+    height: 60rem;
     display: flex;
     align-items: center;
     padding: 0;
