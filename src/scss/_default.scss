@@ -125,7 +125,7 @@ button {
   display: none;
 }
 
-@media (hover: hover) {
+@media(hover: hover) {
   a:hover {
     color: $yellow;
   }
@@ -136,7 +136,7 @@ button {
   }
 }
 
-@media (max-width: 48em) {
+@media(max-width: 48em) {
 
   html {
     //font-size: 0.651vw;
@@ -153,13 +153,13 @@ button {
   }
 }
 
-@media (min-width: 48.1em) {
+@media(min-width: 48.1em) {
   .is-mobile {
     display: none !important;
   }
 }
 
-@media (min-width: 90em) { //1440
+@media(min-width: 90em) { //1440
 
   html {
     font-size: 10px;

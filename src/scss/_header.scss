@@ -23,19 +23,15 @@
   }
 }
 
-@media (max-width: 48em) {
-
+@media(max-width: 48em) {
   .header {
     position: relative;
     &__site-name {
-
     }
 
     &__profile{
       z-index: 5;
     }
-
-
   }
 
 }

@@ -1,20 +1,20 @@
-.digital{
+.digital {
   padding-bottom: 3.8rem;
 
-  &__wrapper{
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     padding-top: 2.2rem;
   }
 
-  &__form{
+  &__form {
     padding-bottom: 3rem;
 
-    &-block{
+    &-block {
 
     }
 
-    &-title{
+    &-title {
       font-size: 3rem;
       letter-spacing: 0.06rem;
       text-align: center;
@@ -23,8 +23,8 @@
 
     }
 
-    &-name{
-      font-family: Forum,sans-serif;
+    &-name {
+      font-family: Forum, sans-serif;
       font-size: 3rem;
       line-height: 155%;
       letter-spacing: 0.06rem;
@@ -33,12 +33,12 @@
       font-weight: 400;
     }
 
-    &-wrapper{
+    &-wrapper {
       border: .3rem solid $yellow;
 
     }
 
-    &-group{
+    &-group {
       width: 56rem;
       background-color: $yellow;
       margin: 2rem 1.8rem 2rem;
@@ -47,11 +47,11 @@
       flex-direction: column;
     }
 
-    &-control{
+    &-control {
 
     }
 
-    &-btn{
+    &-btn {
       padding-left: 4rem;
       padding-right: 4rem;
       display: block;
@@ -62,33 +62,33 @@
 
   }
 
-  &__info{
-    &-card{
+  &__info {
+    &-card {
       max-width: 45.6rem;
       text-align: right;
     }
 
-    &-title{
-      font-family: Forum,sans-serif;
+    &-title {
+      font-family: Forum, sans-serif;
       padding-bottom: 3.2rem;
       font-size: 3rem;
       letter-spacing: 0.06rem;
       line-height: 1.2;
     }
 
-    &-text{
+    &-text {
       letter-spacing: 0.04rem;
       padding-bottom: 3.5rem;
     }
 
-    &-btns{
+    &-btns {
       display: flex;
       justify-content: flex-end;
 
 
-      button{
+      button {
 
-        &:not(:last-child){
+        &:not(:last-child) {
           margin-right: 2rem;
         }
       }
@@ -96,19 +96,20 @@
   }
 }
 
-@media (max-width: 48em) {
-  .digital{
-    &__wrapper{
+@media(max-width: 48em) {
+  .digital {
+    &__wrapper {
       flex-wrap: wrap;
       justify-content: center;
     }
-    &__info{
 
-      &-btns{
+    &__info {
+
+      &-btns {
         justify-content: center;
       }
 
-      &-card{
+      &-card {
         text-align: center;
       }
 

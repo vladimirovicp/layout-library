@@ -1,39 +1,43 @@
-.our-contacts{
+.our-contacts {
   padding-bottom: 2.6rem;
-  &__wrapper{
+
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     padding-top: 2.2rem;
 
-    p{
+    p {
       padding: 0 0 2rem;
       text-transform: capitalize;
 
-      .b{
+      .b {
         margin-left: 1rem;
         font-weight: bold;
       }
     }
   }
 
-  &__item{
-    a{
+  &__item {
+    a {
       color: $dark1;
       margin-left: .9rem;
-      &:hover{
+
+      &:hover {
         color: $yellow;
       }
     }
-    img{
+
+    img {
       width: 69.6rem;
       height: auto;
     }
   }
 
-  &__info{
+  &__info {
     padding-bottom: 4rem;
     font-weight: bold;
-    &-2{
+
+    &-2 {
       padding-top: 2rem;
       padding-bottom: 2rem;
       font-weight: bold;
@@ -42,9 +46,9 @@
 }
 
 
-@media (max-width: 48em) {
-  .our-contacts{
-    &__wrapper{
+@media(max-width: 48em) {
+  .our-contacts {
+    &__wrapper {
       flex-wrap: wrap;
     }
   }
