@@ -56,3 +56,17 @@
   }
 
 }
+
+
+@media (max-width: 48em) {
+  .coffee-shop{
+    &__wrapper{
+      flex-wrap: wrap;
+    }
+    &__item{
+      &:last-child{
+        margin-left: auto;
+      }
+    }
+  }
+}

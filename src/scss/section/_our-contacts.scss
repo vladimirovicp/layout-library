@@ -40,3 +40,12 @@
     }
   }
 }
+
+
+@media (max-width: 48em) {
+  .our-contacts{
+    &__wrapper{
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -95,3 +95,26 @@
     }
   }
 }
+
+@media (max-width: 48em) {
+  .digital{
+    &__wrapper{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__info{
+
+      &-btns{
+        justify-content: center;
+      }
+
+      &-card{
+        text-align: center;
+      }
+
+
+    }
+  }
+}
+
+
