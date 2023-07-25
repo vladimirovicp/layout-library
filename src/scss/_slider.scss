@@ -1,8 +1,6 @@
 .slider {
-
-  //width: 100%;
   position: relative;
-  padding-bottom: 9.6rem;
+  padding-bottom: 8.2rem;
 
 
   &__wrapper {
@@ -129,7 +127,7 @@
       height: 2.3rem;
       display: block;
       position: absolute;
-      top: calc(50% - 3rem);
+      top: calc(50% - 2.2rem);
       transform: translateY(-50%);
       cursor: pointer;
       img{

@@ -129,7 +129,6 @@ button {
   a:hover {
     color: $yellow;
   }
-
   button:hover {
     border-color: $yellow;
     background-color: $yellow;
@@ -139,15 +138,11 @@ button {
 @media(max-width: 48em) {
 
   html {
-    //font-size: 0.651vw;
-    //font-size: 1.34vw;
     font-size: 1.302vw;
   }
-
   .container {
     width: 100%;
   }
-
   .is-desktop {
     display: none !important;
   }
@@ -160,7 +155,6 @@ button {
 }
 
 @media(min-width: 90em) { //1440
-
   html {
     font-size: 10px;
   }

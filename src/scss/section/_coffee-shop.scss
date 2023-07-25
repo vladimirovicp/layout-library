@@ -67,6 +67,9 @@
       &:last-child{
         margin-left: auto;
       }
+      &:not(:last-child){
+        padding-bottom: 2.2rem;
+      }
     }
   }
 }

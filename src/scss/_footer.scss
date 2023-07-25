@@ -36,3 +36,14 @@
     margin-left: 9.6rem;
   }
 }
+
+@media(max-width: 48em){
+  .footer{
+    &__name{
+      &-course{
+        margin-left: 4.2rem;
+      }
+    }
+  }
+
+}

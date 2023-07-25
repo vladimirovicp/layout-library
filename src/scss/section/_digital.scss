@@ -103,14 +103,29 @@
       justify-content: center;
     }
 
+    &__form{
+      &-block{
+        padding-bottom: 2rem;
+      }
+    }
+
     &__info {
+
+      &-title{
+        padding-bottom: 3.8rem;
+      }
 
       &-btns {
         justify-content: center;
       }
 
       &-card {
+        max-width: 80%;
         text-align: center;
+      }
+
+      &-text{
+        padding-bottom: 4rem;
       }
 
 

@@ -21,12 +21,17 @@
       fill: #F5EFDB;
       transition: fill .5s;
     }
+  }
+}
 
-    &:hover{
-      svg{
-        fill: $yellow;
+@media(hover: hover) {
+  .social-networks{
+    &__link{
+      &:hover{
+        svg{
+          fill: $yellow;
+        }
       }
     }
   }
-
 }
