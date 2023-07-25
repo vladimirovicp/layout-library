@@ -1,0 +1,27 @@
+.slider2
+    .slides
+        input(type="radio" name="radio-btn" id="radio1")
+        input(type="radio" name="radio-btn" id="radio2")
+        input(type="radio" name="radio-btn" id="radio3")
+        input(type="radio" name="radio-btn" id="radio4")
+
+        .slide.first
+            img(src=require('/img/about/1.jpg'), alt="photo")
+        .slide
+            img(src=require('/img/about/2.jpg'), alt="photo")
+        .slide
+            img(src=require('/img/about/3.jpg'), alt="photo")
+        .slide
+            img(src=require('/img/about/4.jpg'), alt="photo")
+
+        .navigation-auto
+            .auto-btn1
+            .auto-btn2
+            .auto-btn3
+            .auto-btn4
+
+    .navigation-manual
+        label(for="radio1" class="manual-btn")
+        label(for="radio2" class="manual-btn")
+        label(for="radio3" class="manual-btn")
+        label(for="radio4" class="manual-btn")
