@@ -8,7 +8,7 @@
     //height: 56rem;
     //margin: 0 auto;
     //position: relative;
-    //display: flex;
+    display: flex;
     //justify-content: space-between;
     //gap: 2.5rem;
     white-space: nowrap;
@@ -16,17 +16,19 @@
     overflow: hidden;
 
     img{
-      margin-left: 2.5rem;
+      //margin-left: 2.5rem;
+      margin-left: 25px;
       //width: 45rem;
-      height: 56rem;
-      //width: calc((100% + 5rem) / 3);
-      width: calc((100% / 3) - 2.5rem);
+      //height: 56rem;
+      height: auto;
+      //width: calc((100% / 3) - 2.5rem);
+      width: calc((100% / 3) - 16.6px);
       object-fit: cover;
       user-select: none;
 
       &:first-child{
         margin-left: 0;
-        width: calc(100% / 3);
+        //width: calc(100% / 3);
       }
     }
   }
