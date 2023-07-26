@@ -4,42 +4,61 @@
 
 
   &__wrapper {
-    width: 100%;
-    height: 56rem;
-    margin: 0 auto;
-    position: relative;
+    //width: 100%;
+    //height: 56rem;
+    //margin: 0 auto;
+    //position: relative;
+    //display: flex;
+    //justify-content: space-between;
+    //gap: 2.5rem;
+    white-space: nowrap;
+    scroll-behavior: smooth;
     overflow: hidden;
+
+    img{
+      margin-left: 2.5rem;
+      //width: 45rem;
+      height: 56rem;
+      //width: calc((100% + 5rem) / 3);
+      width: calc((100% / 3) - 2.5rem);
+      object-fit: cover;
+      user-select: none;
+
+      &:first-child{
+        margin-left: 0;
+        width: calc(100% / 3);
+      }
+    }
   }
 
-  .im {
-    position: absolute;
-    top: 0;
-    width: 45rem;
-  }
+  //.im {
+  //  position: absolute;
+  //  top: 0;
+  //  width: 45rem;
+  //}
 
 
-  #i1 {
-    left: 0rem;
-  }
-
-  #i2 {
-    left: 47.5rem;
-  }
-
-  #i3 {
-    left: 95rem;
-  }
-
-  #i4 {
-    left: 142.5rem;
-  }
-
-  #i5 {
-    left: 142.5rem;
-  }
+  //#i1 {
+  //  left: 0rem;
+  //}
+  //
+  //#i2 {
+  //  left: 47.5rem;
+  //}
+  //
+  //#i3 {
+  //  left: 95rem;
+  //}
+  //
+  //#i4 {
+  //  left: 142.5rem;
+  //}
+  //
+  //#i5 {
+  //  left: 142.5rem;
+  //}
 
   &__pagination {
-
     position: absolute;
     bottom: 3.2rem;
     left: 50%;
@@ -71,13 +90,10 @@
       }
     }
 
-    //&:not(:first-child){
-    //  margin-left: 1rem;
-    //}
   }
 
   &__button-prev,&__button-next{
-    display: none;
+    //display: none;
   }
 
   &__button-prev {
@@ -86,6 +102,30 @@
 
   &__button-next {
 
+  }
+
+  &__button-prev, &__button-next {
+    width: 1.4rem;
+    height: 2.3rem;
+    display: block;
+    position: absolute;
+    top: -20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__button-prev {
+    left: 7.6rem;
+    z-index: 5;
+  }
+
+  &__button-next {
+    right: 7.6rem;
+    z-index: 5;
   }
 
 }
@@ -97,30 +137,6 @@
     &__wrapper {
       width: 45rem;
     }
-
-    //#nz, #vp {position: absolute; top: 280px; cursor: pointer;}
-    //#nz {
-    //
-    //}
-    //#vp {
-    //
-    //}
-
-    //#nz, #vp {
-    //  position: absolute;
-    //  top: 280px;
-    //  cursor: pointer;
-    //}
-
-    //#nz {
-    //  left: 40rem;
-    //  z-index: 5;
-    //}
-
-    //#vp {
-    //  right: 40rem;
-    //  z-index: 5;
-    //}
 
     &__button-prev, &__button-next {
       width: 1.4rem;

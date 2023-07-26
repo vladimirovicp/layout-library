@@ -38,13 +38,16 @@ if(slider4){
 
 
 
-        console.log(firstImg.clientWidth)
+        //console.log(firstImg.clientWidth)
 
-        console.log(parseInt(getComputedStyle(document.documentElement).fontSize)) //rem to px
+        //console.log(parseInt(getComputedStyle(document.documentElement).fontSize)) //rem to px
 
 
 
         //carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
+
+
+        console.log(carousel.scrollLeft)
         carousel.scrollLeft += -firstImgWidth;
         setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
 
@@ -64,61 +67,61 @@ if(slider4){
 
 
 
-    const autoSlide = () => {
-        // if there is no image left to scroll then return from here
+    // const autoSlide = () => {
+    //     // if there is no image left to scroll then return from here
+    //
+    //
+    //     if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
+    //
+    //     positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
+    //     //let firstImgWidth = firstImg.clientWidth + 25;
+    //     let firstImgWidth = firstImg.clientWidth + 2.5 * parseInt(getComputedStyle(document.documentElement).fontSize);
+    //     // getting difference value that needs to add or reduce from carousel left to take middle img center
+    //     let valDifference = firstImgWidth - positionDiff;
+    //
+    //     if(carousel.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
+    //         return carousel.scrollLeft += positionDiff > (firstImgWidth / 3)- 1.7 * parseInt(getComputedStyle(document.documentElement).fontSize) ? valDifference : -positionDiff;
+    //     }
+    //     // if user is scrolling to the left
+    //     carousel.scrollLeft -= positionDiff > (firstImgWidth / 3) - 1.7 * parseInt(getComputedStyle(document.documentElement).fontSize) ? valDifference : -positionDiff;
+    // }
 
+    // const dragStart = (e) => {
+    //     // updatating global variables value on mouse down event
+    //
+    //     //console.log(carousel.scrollLeft)
+    //     isDragStart = true;
+    //     prevPageX = e.pageX || e.touches[0].pageX;
+    //     prevScrollLeft = carousel.scrollLeft;
+    // }
+    //
+    // const dragging = (e) => {
+    //     // scrolling images/carousel to left according to mouse pointer
+    //     if(!isDragStart) return;
+    //     e.preventDefault();
+    //     isDragging = true;
+    //     carousel.classList.add("dragging");
+    //     positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+    //     carousel.scrollLeft = prevScrollLeft - positionDiff;
+    //     showHideIcons();
+    // }
+    //
+    // const dragStop = () => {
+    //     isDragStart = false;
+    //     carousel.classList.remove("dragging");
+    //
+    //     if(!isDragging) return;
+    //     isDragging = false;
+    //     autoSlide();
+    // }
 
-        if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
-
-        positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
-        //let firstImgWidth = firstImg.clientWidth + 25;
-        let firstImgWidth = firstImg.clientWidth + 2.5 * parseInt(getComputedStyle(document.documentElement).fontSize);
-        // getting difference value that needs to add or reduce from carousel left to take middle img center
-        let valDifference = firstImgWidth - positionDiff;
-
-        if(carousel.scrollLeft > prevScrollLeft) { // if user is scrolling to the right
-            return carousel.scrollLeft += positionDiff > (firstImgWidth / 3)- 1.7 * parseInt(getComputedStyle(document.documentElement).fontSize) ? valDifference : -positionDiff;
-        }
-        // if user is scrolling to the left
-        carousel.scrollLeft -= positionDiff > (firstImgWidth / 3) - 1.7 * parseInt(getComputedStyle(document.documentElement).fontSize) ? valDifference : -positionDiff;
-    }
-
-    const dragStart = (e) => {
-        // updatating global variables value on mouse down event
-
-        //console.log(carousel.scrollLeft)
-        isDragStart = true;
-        prevPageX = e.pageX || e.touches[0].pageX;
-        prevScrollLeft = carousel.scrollLeft;
-    }
-
-    const dragging = (e) => {
-        // scrolling images/carousel to left according to mouse pointer
-        if(!isDragStart) return;
-        e.preventDefault();
-        isDragging = true;
-        carousel.classList.add("dragging");
-        positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-        carousel.scrollLeft = prevScrollLeft - positionDiff;
-        showHideIcons();
-    }
-
-    const dragStop = () => {
-        isDragStart = false;
-        carousel.classList.remove("dragging");
-
-        if(!isDragging) return;
-        isDragging = false;
-        autoSlide();
-    }
-
-    carousel.addEventListener("mousedown", dragStart);
-    carousel.addEventListener("touchstart", dragStart);
-
-    document.addEventListener("mousemove", dragging);
-    carousel.addEventListener("touchmove", dragging);
-
-    document.addEventListener("mouseup", dragStop);
-    carousel.addEventListener("touchend", dragStop);
+    // carousel.addEventListener("mousedown", dragStart);
+    // carousel.addEventListener("touchstart", dragStart);
+    //
+    // document.addEventListener("mousemove", dragging);
+    // carousel.addEventListener("touchmove", dragging);
+    //
+    // document.addEventListener("mouseup", dragStop);
+    // carousel.addEventListener("touchend", dragStop);
 }
 
