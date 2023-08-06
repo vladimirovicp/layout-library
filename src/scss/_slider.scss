@@ -4,61 +4,20 @@
 
 
   &__wrapper {
-    //width: 100%;
-    //height: 56rem;
-    //margin: 0 auto;
-    //position: relative;
     display: flex;
-    //justify-content: space-between;
-    //gap: 2.5rem;
     white-space: nowrap;
     scroll-behavior: smooth;
     overflow: hidden;
 
     img{
-      //margin-left: 2.5rem;
       margin-left: 25px;
-      //width: 45rem;
-      //height: 56rem;
-      height: auto;
-      //width: calc((100% / 3) - 2.5rem);
-      width: calc((100% / 3) - 16.6px);
       object-fit: cover;
       user-select: none;
-
       &:first-child{
         margin-left: 0;
-        //width: calc(100% / 3);
       }
     }
   }
-
-  //.im {
-  //  position: absolute;
-  //  top: 0;
-  //  width: 45rem;
-  //}
-
-
-  //#i1 {
-  //  left: 0rem;
-  //}
-  //
-  //#i2 {
-  //  left: 47.5rem;
-  //}
-  //
-  //#i3 {
-  //  left: 95rem;
-  //}
-  //
-  //#i4 {
-  //  left: 142.5rem;
-  //}
-  //
-  //#i5 {
-  //  left: 142.5rem;
-  //}
 
   &__pagination {
     position: absolute;
@@ -95,7 +54,7 @@
   }
 
   &__button-prev,&__button-next{
-    //display: none;
+    display: none;
   }
 
   &__button-prev {
@@ -106,38 +65,62 @@
 
   }
 
-  &__button-prev, &__button-next {
-    width: 1.4rem;
-    height: 2.3rem;
-    display: block;
-    position: absolute;
-    top: -20px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    img{
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  &__button-prev {
-    left: 7.6rem;
-    z-index: 5;
-  }
-
-  &__button-next {
-    right: 7.6rem;
-    z-index: 5;
-  }
+  //&__button-prev, &__button-next {
+  //  width: 1.4rem;
+  //  height: 2.3rem;
+  //  display: block;
+  //  position: absolute;
+  //  top: -20px;
+  //  transform: translateY(-50%);
+  //  cursor: pointer;
+  //  img{
+  //    width: 100%;
+  //    height: auto;
+  //  }
+  //}
+  //
+  //&__button-prev {
+  //  left: 7.6rem;
+  //  z-index: 5;
+  //}
+  //
+  //&__button-next {
+  //  right: 7.6rem;
+  //  z-index: 5;
+  //}
 
 }
 
+@media(min-width: 64em){
+  .slider {
+    &__wrapper {
+      img{
+        //margin-left: 25px;
+        height: auto;
+        width: calc((100% / 3) - 16.6px);
+        object-fit: cover;
+        user-select: none;
 
-@media(max-width: 48em){
+        //&:first-child{
+        //  margin-left: 0;
+        //}
+      }
+    }
+  }
+}
+
+
+@media(max-width: 64em){
   .slider {
 
     &__wrapper {
+      margin: 0 auto;
       width: 45rem;
+
+      img{
+        width: 45rem;
+        height: 56rem;
+      }
     }
 
     &__button-prev, &__button-next {

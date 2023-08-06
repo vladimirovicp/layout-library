@@ -2,16 +2,16 @@
 
 .welcome {
   background-color: $dark1;
-  background-image: url("./img/welcome/bg-1920.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 
   .container {
     height: 60rem;
     display: flex;
     align-items: center;
     padding: 0;
+    background-image: url("./img/welcome/bg-1920.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   &__wrapper {
@@ -39,7 +39,7 @@
 
 }
 
-@media(max-width: 48em) {
+@media(max-width: 64em) {
   .welcome {
     background-position: right;
   }

@@ -135,7 +135,7 @@ button {
   }
 }
 
-@media(max-width: 48em) {
+@media(max-width: 64em) {
 
   html {
     font-size: 1.302vw;
@@ -148,7 +148,7 @@ button {
   }
 }
 
-@media(min-width: 48.1em) {
+@media(min-width: 64.1em) {
   .is-mobile {
     display: none !important;
   }
