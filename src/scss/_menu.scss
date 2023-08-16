@@ -24,7 +24,7 @@
     .container{}
     &__wrapper{
       position: fixed;
-      width: 33.2rem;
+      width: 35rem;
       //height: 57rem;
       padding: 10rem 0;
       background-color: $dark1;
@@ -32,6 +32,8 @@
       //right: 0;
       transition: right 0.3s ease 0s;
       overflow: auto;
+
+      z-index: 20;
 
       &.open{
         top: 0;
@@ -43,7 +45,7 @@
       height: 2rem;
     }
     &__icon{
-      z-index: 5;
+      z-index: 25;
       display: block;
       position: relative;
       cursor: pointer;
@@ -100,7 +102,7 @@
     &__item {
       &:not(:last-child) {
         margin-right: 0;
-        margin-bottom: 3rem;
+        margin-bottom: 4.2rem;
       }
     }
   }

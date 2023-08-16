@@ -71,5 +71,17 @@
         padding-bottom: 2.2rem;
       }
     }
+
+    &__slogan{
+      p:first-child{
+        padding-bottom: 0;
+        margin-left: -0.3rem;
+      }
+      p:last-child{
+        padding-top: 0;
+        margin-left: -0.3rem;
+        margin-right: -0.3rem;
+      }
+    }
   }
 }
