@@ -42,14 +42,20 @@
       border-radius: 50%;
       background-color: $dark2;
       display: inline-block;
+      transition: background-color 0.6s, transform 0.6s;
+
 
     }
 
     &.active {
+      pointer-events: none;
+      cursor: default;
       span {
         background-color: $yellow;
       }
     }
+
+
 
   }
 
@@ -65,45 +71,28 @@
 
   }
 
-  //&__button-prev, &__button-next {
-  //  width: 1.4rem;
-  //  height: 2.3rem;
-  //  display: block;
-  //  position: absolute;
-  //  top: -20px;
-  //  transform: translateY(-50%);
-  //  cursor: pointer;
-  //  img{
-  //    width: 100%;
-  //    height: auto;
-  //  }
-  //}
-  //
-  //&__button-prev {
-  //  left: 7.6rem;
-  //  z-index: 5;
-  //}
-  //
-  //&__button-next {
-  //  right: 7.6rem;
-  //  z-index: 5;
-  //}
+}
 
+@media(hover: hover) {
+  .slider {
+    &__bullet {
+      &:hover{
+        span{
+          transform: scale(1.4);
+        }
+      }
+    }
+  }
 }
 
 @media(min-width: 64em){
   .slider {
     &__wrapper {
       img{
-        //margin-left: 25px;
         height: auto;
         width: calc((100% / 3) - 16.6px);
         object-fit: cover;
         user-select: none;
-
-        //&:first-child{
-        //  margin-left: 0;
-        //}
       }
     }
 
@@ -113,13 +102,8 @@
         display: none;
       }
     }
-
-
-
-
   }
 }
-
 
 @media(max-width: 64em){
   .slider {
@@ -143,6 +127,11 @@
       top: calc(50% - 3.5rem);
       transform: translateY(-50%);
       cursor: pointer;
+      &.disable{
+        pointer-events: none;
+        cursor: default;
+      }
+
       img{
         width: 100%;
         height: auto;

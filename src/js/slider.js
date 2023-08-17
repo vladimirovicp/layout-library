@@ -1,90 +1,84 @@
 const slider = document.querySelector('.slider');
 if(slider){
-
-    // const arrowPrev = slider.querySelector('.slider__button-prev');
-    // const arrowNext = slider.querySelector('.slider__button-next');
+    const arrowPrev = slider.querySelector('.slider__button-prev');
+    const arrowNext = slider.querySelector('.slider__button-next');
 
     const arrows = slider.querySelectorAll('.slider__arrow');
-
     const wrapper = slider.querySelector('.slider__wrapper');
+
     const firstImg = wrapper.querySelectorAll("img")[0];
-
-    arrows.forEach(arrow => {
-        arrow.addEventListener("click", () => {
-            let firstImgWidth = firstImg.clientWidth + 25;
-            wrapper.scrollLeft += arrow.classList.contains('slider__button-prev') ? -firstImgWidth : firstImgWidth;
-        });
-    });
-
+    const slides_max = wrapper.querySelectorAll("img").length;
+    let currentBullet = 1;
     const pagination = slider.querySelector('.slider__pagination');
     const bullets = pagination.querySelectorAll('.slider__bullet');
 
-    bullets.forEach(bullet => {
-            bullet.addEventListener("click", () => {
 
-            });
+    arrows.forEach(arrow => {
+        arrow.addEventListener("click", () => {
+
+            // if( (currentBullet < slides_max ) && (currentBullet > 0) ){
+            //
+            // }
+
+
+            //disable
+
+
+                let firstImgWidth = firstImg.clientWidth + 25;
+                wrapper.scrollLeft += arrow.classList.contains('slider__button-prev') ? -firstImgWidth : firstImgWidth;
+
+                let nextBullet = arrow.classList.contains('slider__button-prev') ?  currentBullet - 1 :  currentBullet + 1;
+
+                bullets.forEach(bullet => {
+                    if(Number(bullet.dataset.bullet) === currentBullet ){
+                        bullet.classList.remove('active')
+                    }
+                    if(Number(bullet.dataset.bullet) === nextBullet ){
+                        bullet.classList.add('active');
+                    }
+                })
+                currentBullet = nextBullet;
+
+            arrowPrev.classList.remove('disable')
+            arrowNext.classList.remove('disable')
+
+                if(currentBullet === 1 ){
+                    arrowPrev.classList.remove('.disable')
+                    arrowNext.classList.add('disable')
+                }
+                if(currentBullet === 5 ){
+                    arrowPrev.classList.remove('disable')
+                    arrowNext.classList.add('disable')
+                }
+
+
+        });
     });
 
 
+    bullets.forEach(bullet => {
+            bullet.addEventListener("click", (event) => {
+                let nextBullet = bullet.dataset.bullet;
 
+                bullets.forEach(item => {
+                    if(item.classList.contains('active')) {
+                        item.classList.remove('active')
+                    };
+                })
 
+                if(currentBullet < nextBullet){
+                    let firstImgWidth = (firstImg.clientWidth + 25) * (nextBullet - 1);
+                    wrapper.scrollLeft += firstImgWidth;
 
+                } else {
+                    let firstImgWidth = (firstImg.clientWidth + 25) * (currentBullet - nextBullet);
+                    wrapper.scrollLeft -= firstImgWidth;
+                }
 
-    // arrowPrev.addEventListener("click", () => {
-    //     //const indent = 2.5 * Number((getComputedStyle(document.documentElement).fontSize).replace('px', ''));
-    //     //let firstImgWidth = firstImg.clientWidth + indent;
-    //     const indent2 = 5 * (Number((getComputedStyle(document.documentElement).fontSize).replace('px', ''))* 100) / 100 ;
-    //     let firstImgWidth = (Number((getComputedStyle(wrapper).width).replace('px', '')) + indent2) / 3;
-    //     //let firstImgWidth = Number((getComputedStyle(wrapper).width).replace('px', '')) / 3;
-    //     wrapper.scrollLeft = wrapper.scrollLeft - firstImgWidth;
-    //
-    // });
-    //
-    // arrowNext.addEventListener("click", () => {
-    //
-    //     const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-    //
-    //     console.log(fontSize)
-    //
-    //     //console.log('fontSize',fontSize)
-    //
-    //     //const indent = 2.5 * (Number((getComputedStyle(document.documentElement).fontSize).replace('px', '')));
-    //
-    //     const indent2 = 5 * (Number((getComputedStyle(document.documentElement).fontSize).replace('px', '')) * 10) / 10;
-    //
-    //     const indent = 2.5 * fontSize;
-    //
-    //     //const widthIMG = Math.round(Number((getComputedStyle(firstImg).width).replace('px', '')) * 100) / 100;
-    //
-    //     const widthIMG = 45 * fontSize;
-    //
-    //
-    //
-    //     //console.log('widthIMG',widthIMG)
-    //     //console.log(getComputedStyle(wrapper).width)
-    //
-    //
-    //     //console.log(widthIMG)
-    //     //let firstImgWidth = firstImg.clientWidth + indent;
-    //
-    //     //let firstImgWidth = widthIMG + indent;
-    //
-    //     let firstImgWidth = (Number((getComputedStyle(wrapper).width).replace('px', '')) + indent2) / 3;
-    //
-    //     //(firstImgWidth / 3)
-    //
-    //     //console.log(firstImgWidth)
-    //
-    //
-    //     //let firstImgWidth = getComputedStyle(firstImg).width + 25;
-    //     //console.log(firstImgWidth);
-    //    // console.log(getComputedStyle(wrapper).width)
-    //    // console.log(getComputedStyle(document.documentElement).fontSize)
-    //    // console.log(parseInt(getComputedStyle(document.documentElement).fontSize))
-    //     //console.log(Number((getComputedStyle(document.documentElement).fontSize).replace('px', '')));
-    //
-    //     wrapper.scrollLeft = wrapper.scrollLeft + firstImgWidth;
-    // });
+                currentBullet = nextBullet;
+                bullet.classList.add('active');
+            });
+    });
 
     window.addEventListener('resize', function(event) {
         wrapper.scrollLeft = 0;

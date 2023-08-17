@@ -7,20 +7,20 @@
         img(src=require('/img/about/5.jpg'), alt="photo")
 
 
-    .slider__button-prev.slider__arrow
+    .slider__button-prev.slider__arrow.disable
         img(src=require('/img/svg/arrow/arrow-left.svg'), alt="Назад")
 
     .slider__button-next.slider__arrow
         img(src=require('/img/svg/arrow/arrow-right.svg'), alt="Вперед")
 
     .slider__pagination
-        .slider__bullet.active
+        .slider__bullet.active(data-bullet=1)
             span
-        .slider__bullet
+        .slider__bullet(data-bullet=2)
             span
-        .slider__bullet
+        .slider__bullet(data-bullet=3)
             span
-        .slider__bullet
+        .slider__bullet(data-bullet=4)
             span
-        .slider__bullet
+        .slider__bullet(data-bullet=5)
             span
