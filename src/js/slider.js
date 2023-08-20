@@ -7,47 +7,18 @@ if (slider) {
     const wrapper = slider.querySelector('.slider__wrapper');
 
     const firstImg = wrapper.querySelectorAll("img")[0];
-    const slides_max = wrapper.querySelectorAll("img").length;
+    //const slides_max = wrapper.querySelectorAll("img").length;
     let currentBullet = 1;
     const pagination = slider.querySelector('.slider__pagination');
     const bullets = pagination.querySelectorAll('.slider__bullet');
     let imgWidth = firstImg.clientWidth + 25;
     let positionSlide = 0;
 
-    console.log('imgWidth',imgWidth)
-
-
     arrows.forEach(arrow => {
         arrow.addEventListener("click", () => {
-                console.log('imgWidth',imgWidth)
-                //let firstImgWidth = firstImg.clientWidth + 25;
-                //let firstImgWidth = imgWidth;
-
                 let nextBullet = arrow.classList.contains('slider__button-prev') ? currentBullet - 1 : currentBullet + 1;
-                 console.log('currentBullet',currentBullet)
-                 console.log('nextBullet',nextBullet)
-                 console.log('currentBullet * imgWidth',currentBullet * imgWidth)
-
-                //
                 positionSlide = (currentBullet - 1) * imgWidth;
-                console.log('positionSlide',positionSlide)
-
                 wrapper.scrollLeft = arrow.classList.contains('slider__button-prev') ? positionSlide - imgWidth : positionSlide + imgWidth;
-
-                //wrapper.scrollLeft += arrow.classList.contains('slider__button-prev') ? -firstImgWidth : firstImgWidth;
-
-                // if (currentBullet < nextBullet) {
-                //
-                //     let firstImgWidth = imgWidth * nextBullet;
-                //     console.log('firstImgWidth',firstImgWidth)
-                //     //wrapper.scrollLeft += firstImgWidth;
-                //     console.log(firstImgWidth * nextBullet)
-                //     wrapper.scrollLeft = (firstImgWidth * nextBullet) + 25;
-                //
-                // } else {
-                //     let firstImgWidth = imgWidth * (currentBullet - nextBullet);
-                //     wrapper.scrollLeft -= firstImgWidth;
-                // }
 
                 bullets.forEach(bullet => {
                     if (Number(bullet.dataset.bullet) === currentBullet) {
@@ -115,10 +86,6 @@ if (slider) {
     }, true);
 
 }
-
-
-
-
 
 
 

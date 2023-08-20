@@ -149,13 +149,12 @@ section#favorites.favorites
     .container
         .title
             h2 Favorites
-
         .favorites__title Pick favorites of season
 
         .book
             .favorites__form
-                form(method='GET' action='#' class="favorites__form-book")
-                    .form__group-radio
+                form(action='#' class="favorites__form-book")
+                    .favorites__group
                         input(type='radio',  id="winter" class="form__input-radio" name="season" checked)
                         label(for="winter" class="form__label-radio")
                             span.form__button-radio
@@ -175,12 +174,27 @@ section#favorites.favorites
                         label(for="autumn" class="form__label-radio")
                             span.form__button-radio
                             |Autumn
+
+
             .favorites__cards
                 each item in book
                     if item.none === true
-                        .favorites__card.none
+                        .favorites__card.hide
+                            .favorites__card-wrapper
+                                .favorites__card-staff !{item.top_text}
+                                .favorites__card-name !{item.name}
+                                .favorites__card-by !{item.by}
+                                .favorites__card-description !{item.description}
+
+                                if item.btn == 'active'
+                                    button.favorites__card-btn.disabled(type="submit" disabled="disabled") Own
+                                else
+                                    button.favorites__card-btn(type="submit") Buy
+                                .favorites__card-img
+                                    img(src=require('/img/favorites/' + item.name_image + '.jpg'), alt="photo")
+
                     else
-                        .favorites__card
+                        div(class="favorites__card " + item.season.toLowerCase())
                             .favorites__card-wrapper
                                 .favorites__card-staff !{item.top_text}
                                 .favorites__card-name !{item.name}
