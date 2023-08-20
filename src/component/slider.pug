@@ -1,3 +1,5 @@
+include ./_mixin
+
 .slider
     .slider__wrapper
         img(src=require('/img/about/1.jpg'), alt="photo")
@@ -8,10 +10,10 @@
 
 
     .slider__button-prev.slider__arrow.disable
-        img(src=require('/img/svg/arrow/arrow-left.svg'), alt="Назад")
+        +main-svg('', './img/sprite-images/arrow.svg#left')
 
     .slider__button-next.slider__arrow
-        img(src=require('/img/svg/arrow/arrow-right.svg'), alt="Вперед")
+        +main-svg('', './img/sprite-images/arrow.svg#right')
 
     .slider__pagination
         .slider__bullet.active(data-bullet=1)

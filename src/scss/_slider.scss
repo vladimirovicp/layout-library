@@ -119,23 +119,34 @@
       }
     }
 
+    &__arrow{
+
+    }
+
     &__button-prev, &__button-next {
-      width: 0.8rem;
-      height: 0.8rem;
+      width: 1.4rem;
+      height: 2.3rem;
       display: block;
       position: absolute;
       top: calc(50% - 3.5rem);
       transform: translateY(-50%);
       cursor: pointer;
+
+      svg{
+        width: 1.4rem;
+        height: 2.3rem;
+        fill: black;
+      }
+
       &.disable{
         pointer-events: none;
         cursor: default;
+        svg{
+          fill: #8E8E8E;
+        }
       }
 
-      img{
-        width: 100%;
-        height: auto;
-      }
+
     }
 
     &__button-prev {
