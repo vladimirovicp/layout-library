@@ -179,7 +179,7 @@ section#favorites.favorites
             .favorites__cards
                 each item in book
                     if item.none === true
-                        .favorites__card.hide
+                        div(class="favorites__card visuallyhidden hidden" data-season=item.season.toLowerCase())
                             .favorites__card-wrapper
                                 .favorites__card-staff !{item.top_text}
                                 .favorites__card-name !{item.name}
@@ -194,7 +194,7 @@ section#favorites.favorites
                                     img(src=require('/img/favorites/' + item.name_image + '.jpg'), alt="photo")
 
                     else
-                        div(class="favorites__card " + item.season.toLowerCase())
+                        div(class="favorites__card "  data-season=item.season.toLowerCase())
                             .favorites__card-wrapper
                                 .favorites__card-staff !{item.top_text}
                                 .favorites__card-name !{item.name}

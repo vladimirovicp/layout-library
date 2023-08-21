@@ -1,74 +1,132 @@
-.hide{
-  opacity: 1;
-  animation-name: fadeOut;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
 
-@keyframes  a1{
-  to{
-    opacity: 0;
-    min-height: 0;
-    min-width: 0;
-    width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
+
+.favorites__cards{
+
+  //.none{
+  //  display: none;
+  //}
+
+  .favorites__card{
+    transition: all .5s linear;
+    display: block;
   }
-}
 
-
-
-.fade-in {
-  animation: fadeIn ease 10s;
-  -webkit-animation: fadeIn ease 10s;
-  -moz-animation: fadeIn ease 10s;
-  -o-animation: fadeIn ease 10s;
-  -ms-animation: fadeIn ease 10s;
-}
-
-@keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-@-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-}
-
-.fade-out {
-  animation: fadeOut ease .5s;
-  -webkit-animation: fadeOut ease .5s;
-  -moz-animation: fadeOut ease .5s;
-  -o-animation: fadeOut ease .5s;
-  -ms-animation: fadeOut ease .5s;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity:0;
-    width: 0;
-    max-width: 0;
-    max-height: 0;
+  .hidden {
     display: none;
   }
+
+  .visuallyhidden {
+    opacity: 0;
+  }
+
+
+  //.visible{
+  //  display: block;
+  //  animation: fade-in 1s;
+  //}
+  //
+  //&:not(.visible).hidden .favorites__card-wrapper{
+  //  display: block;
+  //  animation: fade-out 1s;
+  //  background-color: red;
+  //}
+  //
+  //.hidden{
+  //  display: none;
+  //}
 }
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+
+//.hide{
+//  opacity: 1;
+//  animation-name: fadeOut;
+//  animation-duration: 2s;
+//  animation-fill-mode: forwards;
+//}
+//
+//@keyframes  a1{
+//  to{
+//    opacity: 0;
+//    min-height: 0;
+//    min-width: 0;
+//    width: 0;
+//    padding: 0;
+//    margin: 0;
+//    border: 0;
+//  }
+//}
+//
+//
+//
+//.fade-in {
+//  animation: fadeIn ease 10s;
+//  -webkit-animation: fadeIn ease 10s;
+//  -moz-animation: fadeIn ease 10s;
+//  -o-animation: fadeIn ease 10s;
+//  -ms-animation: fadeIn ease 10s;
+//}
+//
+//@keyframes fadeIn {
+//  0% {opacity:0;}
+//  100% {opacity:1;}
+//}
+//
+//@-moz-keyframes fadeIn {
+//  0% {opacity:0;}
+//  100% {opacity:1;}
+//}
+//
+//@-webkit-keyframes fadeIn {
+//  0% {opacity:0;}
+//  100% {opacity:1;}
+//}
+//
+//@-o-keyframes fadeIn {
+//  0% {opacity:0;}
+//  100% {opacity:1;}
+//}
+//
+//@-ms-keyframes fadeIn {
+//  0% {opacity:0;}
+//  100% {opacity:1;}
+//}
+//
+//.fade-out {
+//  animation: fadeOut ease .5s;
+//  -webkit-animation: fadeOut ease .5s;
+//  -moz-animation: fadeOut ease .5s;
+//  -o-animation: fadeOut ease .5s;
+//  -ms-animation: fadeOut ease .5s;
+//}
+//
+//@keyframes fadeOut {
+//  to {
+//    opacity:0;
+//    width: 0;
+//    max-width: 0;
+//    max-height: 0;
+//    display: none;
+//  }
+//}
 
 
 //@keyframes fadeOut {

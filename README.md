@@ -12,3 +12,6 @@
 * Слайдер 3 - https://www.youtube.com/watch?v=0DMtT1dSW0w
 * Слайдер 4 - https://www.codingnepalweb.com/draggable-image-slider-html-css-javascript/
 * https://www.youtube.com/watch?v=3PHXvlpOkf4&t=29112s&pp=ygUQc2xpZGVyIHZhbmlsYSBqcw%3D%3D - просмотреть!!!
+
+* Простой фильтр на чистом JavaScript. HTML / CSS / JS - https://www.youtube.com/watch?v=9MHiVVl7ZEk
+* https://www.impressivewebs.com/animate-display-block-none/
