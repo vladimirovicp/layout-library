@@ -13,47 +13,66 @@ function filterSeason(){
 
     groupBtns.forEach(btn =>{
         const radio = btn.querySelector('input[type="radio"]');
-        radio.addEventListener('click', event =>{
+        radio.addEventListener('click', function (){
 
-            console.log(radio.id)
+            //console.log(radio.id)
 
-            cards.forEach((value) => {
-                console.log(value.dataset.season);
+            // cards.forEach((value) => {
+            //     //console.log(value.dataset.season);
+            //
+            //     if(radio.id === value.dataset.season){
+            //         value.classList.remove('hidden');
+            //         setTimeout(function () {
+            //             value.classList.remove('visuallyhidden');
+            //         }, 400);
+            //
+            //         console.log('remove',value.dataset.season,radio.id);
+            //     } else {
+            //             value.classList.add('visuallyhidden');
+            //             setTimeout(function () {
+            //                 value.classList.add('hidden');
+            //             }, 600);
+            //
+            //         // value.addEventListener('transitionend', function(e) {
+            //         //     value.classList.add('hidden');
+            //         // }, {
+            //         //     capture: false,
+            //         //     once: true,
+            //         //     passive: false
+            //         // });
+            //     }
+            // })
 
-                if(radio.id === value.dataset.season){
-                    value.classList.remove('hidden');
-                    setTimeout(function () {
-                        value.classList.remove('visuallyhidden');
-                    }, 40);
-                } else {
+            (async () => {
+                setTimeout(function () {
+                    cards.forEach((value) => {
+                        if(radio.id === value.dataset.season){
+                            if (value.classList.contains('hidden')){
+                                value.classList.remove('hidden');
+                                setTimeout(function () {
+                                    value.classList.remove('visuallyhidden');
+                                }, 500);
+                            }
+                        }
+                    });
+                }, 500);
+
+                cards.forEach((value) => {
+                    if(radio.id !== value.dataset.season){
                         value.classList.add('visuallyhidden');
-                        // setTimeout(function () {
-                        //     value.classList.add('hidden');
-                        // }, 600);
-
-                        value.addEventListener('transitionend', function(e) {
+                        setTimeout(function () {
                             value.classList.add('hidden');
-                        }, {
-                            capture: false,
-                            once: true,
-                            passive: false
-                        });
-
-
-                    // value.addEventListener('transitionend', function(e) {
-                    //     value.classList.add('hidden');
-                    // }, {
-                    //     capture: false,
-                    //     once: true,
-                    //     passive: false
-                    // });
-                }
-                // console.log(value.dataset.season)
-            })
+                        }, 1000);
+                    }
+                });
+            })();
 
 
 
-        })
+
+
+
+        }, false);
     })
 
 

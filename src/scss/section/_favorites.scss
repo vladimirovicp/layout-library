@@ -110,3 +110,14 @@
     }
   }
 }
+
+@media(min-width: 64em) {
+  .favorites{
+    &__cards{
+      height: 115rem;
+    }
+  }
+
+}
+
+
