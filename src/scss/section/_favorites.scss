@@ -106,7 +106,10 @@
   .favorites {
     &__cards {
       justify-content: center;
+      max-height: 234rem;
       height: 234rem;
+      min-height: 234rem;
+      overflow: hidden;
     }
 
     &__form {

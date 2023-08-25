@@ -13,7 +13,7 @@ function filterSeason(){
 
     groupBtns.forEach(btn =>{
         const radio = btn.querySelector('input[type="radio"]');
-        radio.addEventListener('click', function (){
+        radio.addEventListener('click', function (e){
 
             //console.log(radio.id)
 
@@ -62,7 +62,7 @@ function filterSeason(){
                         value.classList.add('visuallyhidden');
                         setTimeout(function () {
                             value.classList.add('hidden');
-                        }, 1000);
+                        }, 40);
                     }
                 });
             })();
