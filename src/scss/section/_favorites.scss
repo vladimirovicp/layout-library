@@ -102,11 +102,23 @@
 
 }
 
-
 @media(max-width: 64em) {
   .favorites {
     &__cards {
       justify-content: center;
+      height: 234rem;
+    }
+
+  }
+}
+
+@media(max-width: 48em) {
+  .favorites {
+    &__form {
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      z-index: 10;
     }
   }
 }
