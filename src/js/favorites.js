@@ -13,38 +13,10 @@ function filterSeason(){
 
     groupBtns.forEach(btn =>{
         const radio = btn.querySelector('input[type="radio"]');
-        radio.addEventListener('click', function (e){
-
-            //console.log(radio.id)
-
-            // cards.forEach((value) => {
-            //     //console.log(value.dataset.season);
-            //
-            //     if(radio.id === value.dataset.season){
-            //         value.classList.remove('hidden');
-            //         setTimeout(function () {
-            //             value.classList.remove('visuallyhidden');
-            //         }, 400);
-            //
-            //         console.log('remove',value.dataset.season,radio.id);
-            //     } else {
-            //             value.classList.add('visuallyhidden');
-            //             setTimeout(function () {
-            //                 value.classList.add('hidden');
-            //             }, 600);
-            //
-            //         // value.addEventListener('transitionend', function(e) {
-            //         //     value.classList.add('hidden');
-            //         // }, {
-            //         //     capture: false,
-            //         //     once: true,
-            //         //     passive: false
-            //         // });
-            //     }
-            // })
-
+        radio.addEventListener('click', function (){
             (async () => {
                 setTimeout(function () {
+
                     cards.forEach((value) => {
                         if(radio.id === value.dataset.season){
                             if (value.classList.contains('hidden')){
@@ -55,14 +27,18 @@ function filterSeason(){
                             }
                         }
                     });
+
                 }, 500);
+
 
                 cards.forEach((value) => {
                     if(radio.id !== value.dataset.season){
                         value.classList.add('visuallyhidden');
                         setTimeout(function () {
                             value.classList.add('hidden');
-                        }, 40);
+                        }, 400);
+
+
                     }
                 });
             })();

@@ -34,7 +34,14 @@ header.header
                     each item in menu
                         li.menu__item
                             a(href=item.href class="menu__link") !{item.name}
-        .header__profile
+        .header__profile.profile
             img(src=require('../img/svg/icon_profile.svg'), alt="profile")
+            .profile__wrapper
+                .profile__title Profile
+                ul
+                    li
+                        a(href="#") Log In
+                    li
+                        a(href="#") Register
 
 
