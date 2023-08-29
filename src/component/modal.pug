@@ -1,13 +1,16 @@
 .modal.modal-show
-    .modal_content
-        h2 Login
-        .form__group
-            input(type="text" class="form__input" id="login-mail" required="")
-            label(for="login-mail" class="form__label") E-mail or readers card
-        .form__group
-            input(type="text" class="form__input" id="login-password" required="")
-            label(for="login-password" class="form__label") Password
-
-        button(class="btn" type="submit") Log In
+    .modal__content
+        h2.modal__title Login
+        form(class="form__login modal__form")
+            .modal__form-group
+                label(for="login-mail" class="modal__form-label") E-mail or readers card
+                input(type="email" class="modal__form-input" id="login-mail")
+            .modal__form-group
+                label(for="login-password" class="modal__form-label") Password
+                input(type="password" class="modal__form-input" id="login-password")
+            button(class="btn" type="submit") Log In
+        .modal__footer
+            span Don’t have an account?
+            a(href="#") Register
 
 

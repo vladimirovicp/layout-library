@@ -21,7 +21,7 @@ iconProfile.addEventListener('click', ()=>{
         }
 
         document.onclick = function (e) {
-            if(e.target.className == "_lock"){
+            if(e.target.className === "_lock"){
                 closeProfile();
             }
         };
