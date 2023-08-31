@@ -8,6 +8,9 @@ const menu = header.querySelector('.menu')
 const iconMenu = menu.querySelector('.menu__icon');
 const menuWrapper = menu.querySelector('.menu__wrapper');
 
+//popup
+const modal = document.querySelector('.modal');
+
 // Profile
 iconProfile.addEventListener('click', ()=>{
 
@@ -104,6 +107,62 @@ function closeProfile(){
     profileWrapper.classList.remove('_open');
     document.body.classList.remove('_lock');
 }
+
+const createDiv = document.createElement("div");
+const createH2 = document.createElement("h2");
+const createForm = document.createElement("form");
+const createLabel = document.createElement("label");
+const createInput = document.createElement("input");
+
+function createLogin(){
+
+    //modal
+    // const test = document.createElement("button");
+    // test.classList.add('new-game-btn');
+    // test.textContent = "Начать снова";
+    // modal.append(test);
+
+
+    const contentPopup = document.createElement("div");
+    contentPopup.classList.add('modal__content');
+
+    const titlePopup = createH2;
+    titlePopup.classList.add('modal__title');
+    titlePopup.textContent = "Login";
+
+    const formPopup = createForm;
+    formPopup.classList.add('modal__form');
+    formPopup.classList.add('form__login');
+
+
+
+    const formGroupPopup = document.createElement("div");;
+    formGroupPopup.classList.add('modal__form-group');
+
+
+    const labelPopupMail = createLabel;
+    labelPopupMail.htmlFor = 'login-mail';
+    labelPopupMail.classList.add('modal__form-label');
+    labelPopupMail.textContent = 'E-mail or readers card';
+
+    const inputPopupMail = createInput;
+    inputPopupMail.classList.add('modal__form-input');
+    inputPopupMail.setAttribute("id", "login-mail");
+    inputPopupMail.type = "email";
+
+
+    formGroupPopup.append(labelPopupMail);
+    formGroupPopup.append(inputPopupMail);
+    formPopup.append(formGroupPopup);
+
+    contentPopup.append(titlePopup);
+    contentPopup.append(formPopup);
+
+    modal.append(contentPopup)
+
+}
+
+createLogin();
 
 
 

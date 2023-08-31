@@ -8,11 +8,32 @@
   top: 50%;
   left: 50%;
 
+
   &-show {
     z-index: 77;
     pointer-events: all;
     opacity: 1;
     transform: scale(1) translate(-50%, -50%);
+  }
+
+  &__close{
+    position: absolute;
+    font-size: 1em;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.3s ease;
+    transition-property: opacity;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url("./img/svg/close_btn.svg");
+    background-size: contain;
+
+    &:hover{
+      opacity: 0.5;
+    }
   }
 
   &__content{
