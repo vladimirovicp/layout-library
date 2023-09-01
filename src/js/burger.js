@@ -1,6 +1,7 @@
 // Profile
 const iconProfile = document.querySelector('.header__profile');
 const profileWrapper = iconProfile.querySelector('.profile__wrapper');
+const profileLink = iconProfile.querySelector('.profile__link');
 
 //Header menu
 const header = document.querySelector('.header');
@@ -12,7 +13,7 @@ const menuWrapper = menu.querySelector('.menu__wrapper');
 const modal = document.querySelector('.modal');
 
 // Profile
-iconProfile.addEventListener('click', ()=>{
+profileLink.addEventListener('click', ()=>{
 
         if(menuWrapper.classList.contains("open")){
             closeMenu();
@@ -23,12 +24,21 @@ iconProfile.addEventListener('click', ()=>{
             openProfile();
         }
 
+
         document.onclick = function (e) {
-            if(e.target.className === "_lock"){
+            if(e.target.className == "_lock"){
                 closeProfile();
             }
         };
 });
+
+const menuLink = menuWrapper.querySelectorAll('.menu__link');
+menuLink.forEach((link)=>{
+    link.addEventListener('click', ()=>{
+        closeMenu();
+    });
+});
+
 
 
 //Header menu
@@ -63,11 +73,17 @@ if(iconMenu){
             openMenu()
         }
 
+
         document.onclick = function (e) {
+
             if(e.target.className == "_lock"){
                 closeMenu();
             }
+
         };
+
+
+
     });
 }
 
@@ -108,61 +124,148 @@ function closeProfile(){
     document.body.classList.remove('_lock');
 }
 
-const createDiv = document.createElement("div");
-const createH2 = document.createElement("h2");
-const createForm = document.createElement("form");
-const createLabel = document.createElement("label");
-const createInput = document.createElement("input");
-
-function createLogin(){
-
-    //modal
-    // const test = document.createElement("button");
-    // test.classList.add('new-game-btn');
-    // test.textContent = "Начать снова";
-    // modal.append(test);
 
 
-    const contentPopup = document.createElement("div");
-    contentPopup.classList.add('modal__content');
+// const createDiv = document.createElement("div");
+// const createH2 = document.createElement("h2");
+// const createForm = document.createElement("form");
+// const createLabel = document.createElement("label");
+// const createInput = document.createElement("input");
+//
+// function createLogin(){
+//
+//     //modal
+//     // const test = document.createElement("button");
+//     // test.classList.add('new-game-btn');
+//     // test.textContent = "Начать снова";
+//     // modal.append(test);
+//
+//
+//     const contentPopup = document.createElement("div");
+//     contentPopup.classList.add('modal__content');
+//
+//     const titlePopup = createH2;
+//     titlePopup.classList.add('modal__title');
+//     titlePopup.textContent = "Login";
+//
+//     const formPopup = createForm;
+//     formPopup.classList.add('modal__form');
+//     formPopup.classList.add('form__login');
+//
+//
+//
+//     const formGroupPopup = document.createElement("div");;
+//     formGroupPopup.classList.add('modal__form-group');
+//
+//
+//     const labelPopupMail = createLabel;
+//     labelPopupMail.htmlFor = 'login-mail';
+//     labelPopupMail.classList.add('modal__form-label');
+//     labelPopupMail.textContent = 'E-mail or readers card';
+//
+//     const inputPopupMail = createInput;
+//     inputPopupMail.classList.add('modal__form-input');
+//     inputPopupMail.setAttribute("id", "login-mail");
+//     inputPopupMail.type = "email";
+//
+//
+//     formGroupPopup.append(labelPopupMail);
+//     formGroupPopup.append(inputPopupMail);
+//     formPopup.append(formGroupPopup);
+//
+//     contentPopup.append(titlePopup);
+//     contentPopup.append(formPopup);
+//
+//     modal.append(contentPopup)
+//
+// }
 
-    const titlePopup = createH2;
-    titlePopup.classList.add('modal__title');
-    titlePopup.textContent = "Login";
+//createLogin();
 
-    const formPopup = createForm;
-    formPopup.classList.add('modal__form');
-    formPopup.classList.add('form__login');
+//modal
 
+const loginPopUp = document.querySelector('.modal__form-login'); // Само окно
+const openPopupButtonslogin = document.querySelectorAll('.open-modal-login'); // Кнопки для показа окна
 
-
-    const formGroupPopup = document.createElement("div");;
-    formGroupPopup.classList.add('modal__form-group');
+const signUpPopUp = document.querySelector('.modal__form-register');
+const openPopupButtonsSignUp = document.querySelectorAll('.open-modal-register'); // Кнопки для показа окна
 
 
-    const labelPopupMail = createLabel;
-    labelPopupMail.htmlFor = 'login-mail';
-    labelPopupMail.classList.add('modal__form-label');
-    labelPopupMail.textContent = 'E-mail or readers card';
+openPopupButtonslogin.forEach((button) =>{
+    button.addEventListener('click', (e) => {
 
-    const inputPopupMail = createInput;
-    inputPopupMail.classList.add('modal__form-input');
-    inputPopupMail.setAttribute("id", "login-mail");
-    inputPopupMail.type = "email";
+        if(profileWrapper.classList.contains('_open')){
+            closeProfile();
+        }
+        if(signUpPopUp.classList.contains('active')){
+            closeSignUp();
+        }
+
+        e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+        openLogin();
+
+        document.onclick = function (e) {
+            if(e.target.className == "_lock"){
+                closeLogin();
+            }
+        };
+        const modalClose = loginPopUp.querySelector('.modal__close');
+        modalClose.addEventListener('click', (e) => {
+            closeLogin();
+        });
+    })
+});
+
+openPopupButtonsSignUp.forEach((button) =>{
+    button.addEventListener('click', (e) => {
+        e.preventDefault(); // Предотвращаем дефолтное поведение браузера
+
+        if(profileWrapper.classList.contains('_open')){
+            closeProfile();
+        }
+
+        if(loginPopUp.classList.contains('active')){
+            closeLogin();
+        }
+
+        openSignUp();
+        document.onclick = function (e) {
+            if(e.target.className == "_lock"){
+                closeSignUp();
+            }
+        };
+
+        const modalClose = signUpPopUp.querySelector('.modal__close');
+        modalClose.addEventListener('click', (e) => {
+            closeSignUp();
+        });
+    })
+})
 
 
-    formGroupPopup.append(labelPopupMail);
-    formGroupPopup.append(inputPopupMail);
-    formPopup.append(formGroupPopup);
 
-    contentPopup.append(titlePopup);
-    contentPopup.append(formPopup);
-
-    modal.append(contentPopup)
-
+function openLogin(){
+    loginPopUp.classList.add('active');
+    document.body.classList.add('_lock');
 }
 
-createLogin();
+function closeLogin(){
+    loginPopUp.classList.remove('active');
+    document.body.classList.remove('_lock');
+}
+
+
+function openSignUp(){
+    signUpPopUp.classList.add('active');
+    document.body.classList.add('_lock');
+}
+
+function closeSignUp(){
+    signUpPopUp.classList.remove('active');
+    document.body.classList.remove('_lock');
+}
+
+
 
 
 

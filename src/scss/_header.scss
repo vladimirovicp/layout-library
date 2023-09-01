@@ -37,6 +37,10 @@
   order: 2;
   z-index: 20;
 
+  &__link{
+    display: flex;
+  }
+
   &__title {
     margin: 0;
     padding: 0;
