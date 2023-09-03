@@ -2,14 +2,15 @@
     span.modal__close
     .modal__content
         h2.modal__title Login
-        form(class="form__login modal__form")
+        form(class="form__login modal__form" action="#")
             .modal__form-group
                 label(for="login-mail" class="modal__form-label") E-mail or readers card
-                input(type="email" class="modal__form-input" id="login-mail")
+                input(type="email" placeholder="" class="modal__form-input" id="login-mail" required)
             .modal__form-group
-                label(for="login-password" class="modal__form-label") Password
-                input(type="password" class="modal__form-input" id="login-password")
+                label(for="login-password" class="modal__form-label" required) Password
+                input(type="password" minlength="8" placeholder="" class="modal__form-input" id="login-password" required)
             button(class="btn" type="submit") Log In
+            //input(type="submit" class="btn"  VALUE="Log In")
         .modal__footer
             span Don’t have an account?
             a(href="#" class="open-modal-register") Register
@@ -21,16 +22,16 @@
         form(class="form__register modal__form")
             .modal__form-group
                 label(for="register-name" class="modal__form-label") First name
-                input(type="text" class="modal__form-input" id="register-name")
+                input(type="text" minlength="1" placeholder="" class="modal__form-input" id="register-name" required)
                 .modal__form-group
                     label(for="register-l-name" class="modal__form-label") Last name
-                    input(type="text" class="modal__form-input" id="register-l-name")
+                    input(type="text" minlength="1" placeholder="" class="modal__form-input" id="register-l-name" required)
             .modal__form-group
-                label(for="register-mail" class="modal__form-label") E-mail
-                input(type="email" class="modal__form-input" id="register-mail")
+                label(for="register-mail"  class="modal__form-label") E-mail
+                input(type="email" placeholder="" class="modal__form-input" id="register-mail" required)
             .modal__form-group
                 label(for="register-password" class="modal__form-label") Password
-                input(type="password" class="modal__form-input" id="register-password")
+                input(type="password" minlength="8" placeholder="" class="modal__form-input" id="register-password" required)
             button(class="btn" type="submit") Sign Up
         .modal__footer
             span Already have an account?

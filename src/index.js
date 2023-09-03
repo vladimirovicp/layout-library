@@ -11,3 +11,5 @@ import './js/slider'
 // import './js/slider4'
 import './js/favorites'
 import './js/digital'
+
+import './js/form'

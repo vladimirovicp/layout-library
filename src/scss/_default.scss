@@ -117,7 +117,12 @@ input {
     outline: none;
   }
   &:invalid {
-    border: .2rem solid red !important;
+    //border: .2rem solid red !important;
+    &:not(:placeholder-shown) {border-color: red;}
+  }
+  &:valid {
+    //border-color: green;
+    &:not(:placeholder-shown) {border-color: green;}
   }
 }
 button {
