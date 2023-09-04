@@ -1,3 +1,5 @@
+import './burger'
+
 const register = document.querySelector('.form__register');
 const registerBtn = register.querySelector('.btn');
 
@@ -7,6 +9,12 @@ const registerMail = register.querySelector('#register-mail');
 const registerPassword = register.querySelector('#register-password');
 
 const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+
+const profileAnonym = document.querySelector('.profile__anonym');
+const profileAuth = document.querySelector('.profile__auth');
+const profileLink  = document.querySelector('.header__profile-link');
+const profileNameSpan = profileLink.querySelector('span');
 
 
 let users = [];
@@ -76,16 +84,7 @@ function userRegister(name,lastName,password,mail){
     console.log(users)
 
     if(users === undefined || users.length === 0){
-        users.push({
-            'name': name,
-            'lastName': lastName,
-            'password': password,
-            'mail': mail
-        });
-
-        //console.log(typeof users)
-        localStorage.setItem('users', JSON.stringify(users)); //сохраняем данные users в localStorage
-
+        addUser();
     } else{
         users.forEach(function(user) {
             if (mail === user.mail){
@@ -94,19 +93,30 @@ function userRegister(name,lastName,password,mail){
         });
 
         if(newUser){
-            users.push({
-                'name': name,
-                'lastName': lastName,
-                'password': password,
-                'mail': mail
-            });
-            localStorage.setItem('users', JSON.stringify(users)); //сохраняем данные users в localStorage
+            addUser();
         } else {
             console.log('Пользователь с такой почтой зарегистрирован!');
         }
     }
 
+    function addUser(){
+        users.push({
+            'name': name,
+            'lastName': lastName,
+            'password': password,
+            'mail': mail
+        });
+        localStorage.setItem('users', JSON.stringify(users)); //сохраняем данные users в localStorage
+
+        profileAnonym.classList.remove('active');
+        profileAuth.classList.add('active');
+        profileLink.classList.add('auth');
+        profileNameSpan.textContent = name[0].toUpperCase() + lastName[0].toUpperCase();
+        //closeSignUp();
+    }
 }
+
+
 
 
 // localStorage.setItem - метод сохраняющий данные в localStorage. Два параметра метода: имя значения, которое сохраняется и само значение, которое сохраняется
