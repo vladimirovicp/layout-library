@@ -1,3 +1,6 @@
+import { openLogin, closeLogin, openSignUp, closeSignUp } from './helper.js';
+
+
 // Profile
 const iconProfile = document.querySelector('.header__profile');
 const profileWrapper = iconProfile.querySelector('.profile__wrapper');
@@ -10,6 +13,7 @@ const iconMenu = menu.querySelector('.menu__icon');
 const menuWrapper = menu.querySelector('.menu__wrapper');
 
 //popup
+
 const modal = document.querySelector('.modal');
 
 // Profile
@@ -184,9 +188,9 @@ function closeProfile(){
 
 //modal
 
-const loginPopUp = document.querySelector('.modal__form-login'); // Само окно
+//const loginPopUp = document.querySelector('.modal__form-login'); // Само окно
 const openPopupButtonslogin = document.querySelectorAll('.open-modal-login'); // Кнопки для показа окна
-
+const loginPopUp = document.querySelector('.modal__form-login');
 const signUpPopUp = document.querySelector('.modal__form-register');
 const openPopupButtonsSignUp = document.querySelectorAll('.open-modal-register'); // Кнопки для показа окна
 
@@ -198,20 +202,20 @@ openPopupButtonslogin.forEach((button) =>{
             closeProfile();
         }
         if(signUpPopUp.classList.contains('active')){
-            closeSignUp();
+            closeSignUp(signUpPopUp);
         }
 
         e.preventDefault(); // Предотвращаем дефолтное поведение браузера
-        openLogin();
+        openLogin(loginPopUp);
 
         document.onclick = function (e) {
             if(e.target.className == "_lock"){
-                closeLogin();
+                closeLogin(loginPopUp);
             }
         };
         const modalClose = loginPopUp.querySelector('.modal__close');
         modalClose.addEventListener('click', (e) => {
-            closeLogin();
+            closeLogin(loginPopUp);
         });
     })
 });
@@ -225,45 +229,45 @@ openPopupButtonsSignUp.forEach((button) =>{
         }
 
         if(loginPopUp.classList.contains('active')){
-            closeLogin();
+            closeLogin(loginPopUp);
         }
 
-        openSignUp();
+        openSignUp(signUpPopUp);
         document.onclick = function (e) {
             if(e.target.className == "_lock"){
-                closeSignUp();
+                closeSignUp(signUpPopUp);
             }
         };
 
         const modalClose = signUpPopUp.querySelector('.modal__close');
         modalClose.addEventListener('click', (e) => {
-            closeSignUp();
+            closeSignUp(signUpPopUp);
         });
     })
 })
 
 
 
-function openLogin(){
-    loginPopUp.classList.add('active');
-    document.body.classList.add('_lock');
-}
+// function openLogin(){
+//     loginPopUp.classList.add('active');
+//     document.body.classList.add('_lock');
+// }
 
-function closeLogin(){
-    loginPopUp.classList.remove('active');
-    document.body.classList.remove('_lock');
-}
+// function closeLogin(){
+//     loginPopUp.classList.remove('active');
+//     document.body.classList.remove('_lock');
+// }
 
 
-function openSignUp(){
-    signUpPopUp.classList.add('active');
-    document.body.classList.add('_lock');
-}
+// function openSignUp(){
+//     signUpPopUp.classList.add('active');
+//     document.body.classList.add('_lock');
+// }
 
-function closeSignUp(){
-    signUpPopUp.classList.remove('active');
-    document.body.classList.remove('_lock');
-}
+// function closeSignUp(){
+//     signUpPopUp.classList.remove('active');
+//     document.body.classList.remove('_lock');
+// }
 
 
 

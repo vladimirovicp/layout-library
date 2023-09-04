@@ -1,4 +1,6 @@
-import './burger'
+import { openLogin, closeLogin, openSignUp, closeSignUp } from './helper.js';
+
+const signUpPopUp = document.querySelector('.modal__form-register');
 
 const register = document.querySelector('.form__register');
 const registerBtn = register.querySelector('.btn');
@@ -17,7 +19,11 @@ const profileLink  = document.querySelector('.header__profile-link');
 const profileNameSpan = profileLink.querySelector('span');
 
 
+const logOutBtn = profileAuth.querySelector('open-modal-log-out');
+
+
 let users = [];
+let currentUser = {};
 
 function isEmailValid(value) {
     return EMAIL_REGEXP.test(value);
@@ -62,12 +68,34 @@ registerBtn.addEventListener('click',(e)=>{
 
 })
 
+// logOutBtn.addEventListener('click',(e) => {
+//     localStorage.removeItem('currentUser');
+//
+//     profileAnonym.classList.add('active');
+//     profileAuth.classList.remove('active');
+//     profileLink.classList.remove('auth');
+//
+//     //profileNameSpan.textContent = currentUser.name[0].toUpperCase() + currentUser.lastName[0].toUpperCase();
+//
+// });
+
 
 
 function getLocalStorage() {
     if(localStorage.getItem('users') !== null){
         users = JSON.parse(localStorage.getItem('users'));
         console.log('Пользователи из localStorage',users);
+    }
+
+    if(localStorage.getItem('currentUser') !== null){
+        currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+        profileAnonym.classList.remove('active');
+        profileAuth.classList.add('active');
+        profileLink.classList.add('auth');
+        profileNameSpan.textContent = currentUser.name[0].toUpperCase() + currentUser.lastName[0].toUpperCase();
+
+        console.log('Пользователь localStorage', currentUser);
     }
 }
 
@@ -94,6 +122,7 @@ function userRegister(name,lastName,password,mail){
 
         if(newUser){
             addUser();
+            authUser()
         } else {
             console.log('Пользователь с такой почтой зарегистрирован!');
         }
@@ -106,13 +135,26 @@ function userRegister(name,lastName,password,mail){
             'password': password,
             'mail': mail
         });
+        authUser();
+
         localStorage.setItem('users', JSON.stringify(users)); //сохраняем данные users в localStorage
+        localStorage.setItem('currentUser', JSON.stringify(currentUser)); //сохраняем данные users в localStorage
+
 
         profileAnonym.classList.remove('active');
         profileAuth.classList.add('active');
         profileLink.classList.add('auth');
         profileNameSpan.textContent = name[0].toUpperCase() + lastName[0].toUpperCase();
-        //closeSignUp();
+        closeSignUp(signUpPopUp);
+    }
+
+    function authUser(){
+        currentUser = {
+            'name': name,
+            'lastName': lastName,
+            'password': password,
+            'mail': mail
+        };
     }
 }
 
