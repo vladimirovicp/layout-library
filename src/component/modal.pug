@@ -3,12 +3,13 @@
     .modal__content
         h2.modal__title Login
         form(class="form__login modal__form" action="#")
+            .form__error Логин или пароль введены неверно
             .modal__form-group
                 label(for="login-mail" class="modal__form-label") E-mail or readers card
-                input(type="email" placeholder="" class="modal__form-input" id="login-mail" required)
+                input(type="email" placeholder="" class="modal__form-input" id="login-mail" required value="dfgdf2@df.ru")
             .modal__form-group
                 label(for="login-password" class="modal__form-label" required) Password
-                input(type="password" minlength="8" placeholder="" class="modal__form-input" id="login-password" required)
+                input(type="password" minlength="8" placeholder="" class="modal__form-input" id="login-password" required value="111111111")
             button(class="btn" type="submit") Log In
             //input(type="submit" class="btn"  VALUE="Log In")
         .modal__footer
